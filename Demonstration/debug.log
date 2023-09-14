@@ -1,0 +1,531 @@
+2023-06-29 14:25:27,218 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-29 14:25:28,026 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-06-29 14:25:28,130 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-06-29 14:25:28,130 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-06-29 14:25:28,130 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-06-29 14:25:28,131 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-09-09 09:33:33,500 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-09 09:36:07,124 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-14 16:48:45,056 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-14 16:57:09,789 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-14 16:57:10,925 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-09-14 16:57:11,404 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-09-14 16:57:11,404 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-09-14 16:57:11,405 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-09-14 16:57:11,405 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-09-14 16:58:16,302 PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+2023-09-14 16:58:16,303 PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 41 1310
+2023-09-14 16:58:16,303 PIL.Image    DEBUG    Importing BlpImagePlugin
+2023-09-14 16:58:16,318 PIL.Image    DEBUG    Importing BmpImagePlugin
+2023-09-14 16:58:16,318 PIL.Image    DEBUG    Importing BufrStubImagePlugin
+2023-09-14 16:58:16,319 PIL.Image    DEBUG    Importing CurImagePlugin
+2023-09-14 16:58:16,320 PIL.Image    DEBUG    Importing DcxImagePlugin
+2023-09-14 16:58:16,327 PIL.Image    DEBUG    Importing DdsImagePlugin
+2023-09-14 16:58:16,328 PIL.Image    DEBUG    Importing EpsImagePlugin
+2023-09-14 16:58:16,328 PIL.Image    DEBUG    Importing FitsImagePlugin
+2023-09-14 16:58:16,329 PIL.Image    DEBUG    Importing FitsStubImagePlugin
+2023-09-14 16:58:16,329 PIL.Image    DEBUG    Importing FliImagePlugin
+2023-09-14 16:58:16,330 PIL.Image    DEBUG    Importing FpxImagePlugin
+2023-09-14 16:58:16,371 PIL.Image    DEBUG    Importing FtexImagePlugin
+2023-09-14 16:58:16,373 PIL.Image    DEBUG    Importing GbrImagePlugin
+2023-09-14 16:58:16,373 PIL.Image    DEBUG    Importing GifImagePlugin
+2023-09-14 16:58:16,373 PIL.Image    DEBUG    Importing GribStubImagePlugin
+2023-09-14 16:58:16,374 PIL.Image    DEBUG    Importing Hdf5StubImagePlugin
+2023-09-14 16:58:16,375 PIL.Image    DEBUG    Importing IcnsImagePlugin
+2023-09-14 16:58:16,378 PIL.Image    DEBUG    Importing IcoImagePlugin
+2023-09-14 16:58:16,379 PIL.Image    DEBUG    Importing ImImagePlugin
+2023-09-14 16:58:16,380 PIL.Image    DEBUG    Importing ImtImagePlugin
+2023-09-14 16:58:16,381 PIL.Image    DEBUG    Importing IptcImagePlugin
+2023-09-14 16:58:16,382 PIL.Image    DEBUG    Importing JpegImagePlugin
+2023-09-14 16:58:16,382 PIL.Image    DEBUG    Importing Jpeg2KImagePlugin
+2023-09-14 16:58:16,382 PIL.Image    DEBUG    Importing McIdasImagePlugin
+2023-09-14 16:58:16,383 PIL.Image    DEBUG    Importing MicImagePlugin
+2023-09-14 16:58:16,384 PIL.Image    DEBUG    Importing MpegImagePlugin
+2023-09-14 16:58:16,385 PIL.Image    DEBUG    Importing MpoImagePlugin
+2023-09-14 16:58:16,386 PIL.Image    DEBUG    Importing MspImagePlugin
+2023-09-14 16:58:16,387 PIL.Image    DEBUG    Importing PalmImagePlugin
+2023-09-14 16:58:16,389 PIL.Image    DEBUG    Importing PcdImagePlugin
+2023-09-14 16:58:16,390 PIL.Image    DEBUG    Importing PcxImagePlugin
+2023-09-14 16:58:16,390 PIL.Image    DEBUG    Importing PdfImagePlugin
+2023-09-14 16:58:16,401 PIL.Image    DEBUG    Importing PixarImagePlugin
+2023-09-14 16:58:16,402 PIL.Image    DEBUG    Importing PngImagePlugin
+2023-09-14 16:58:16,402 PIL.Image    DEBUG    Importing PpmImagePlugin
+2023-09-14 16:58:16,402 PIL.Image    DEBUG    Importing PsdImagePlugin
+2023-09-14 16:58:16,403 PIL.Image    DEBUG    Importing SgiImagePlugin
+2023-09-14 16:58:16,404 PIL.Image    DEBUG    Importing SpiderImagePlugin
+2023-09-14 16:58:16,404 PIL.Image    DEBUG    Image: failed to import SpiderImagePlugin: No module named 'PIL.SpiderImagePlugin'
+2023-09-14 16:58:16,404 PIL.Image    DEBUG    Importing SunImagePlugin
+2023-09-14 16:58:16,404 PIL.Image    DEBUG    Importing TgaImagePlugin
+2023-09-14 16:58:16,405 PIL.Image    DEBUG    Importing TiffImagePlugin
+2023-09-14 16:58:16,405 PIL.Image    DEBUG    Importing WebPImagePlugin
+2023-09-14 16:58:16,428 PIL.Image    DEBUG    Importing WmfImagePlugin
+2023-09-14 16:58:16,429 PIL.Image    DEBUG    Importing XbmImagePlugin
+2023-09-14 16:58:16,432 PIL.Image    DEBUG    Importing XpmImagePlugin
+2023-09-14 16:58:16,434 PIL.Image    DEBUG    Importing XVThumbImagePlugin
+2023-09-14 16:58:16,436 PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+2023-09-14 16:58:16,436 PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 41 1310
+2023-09-14 16:58:16,580 django.request ERROR    Internal Server Error: /home/
+Traceback (most recent call last):
+  File "/home/android/.local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/Practice/Demonstration/demapp/views.py", line 94, in use_nn
+    model_loaded = keras.models.load_model('/home/android/PycharmProjects/Practice/Demonstration/demapp/model')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/lib/python3.11/site-packages/keras/src/saving/saving_api.py", line 238, in load_model
+    return legacy_sm_saving_lib.load_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/lib/python3.11/site-packages/keras/src/utils/traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/home/android/.local/lib/python3.11/site-packages/keras/src/saving/legacy/save.py", line 234, in load_model
+    raise IOError(
+OSError: No file or directory found at /home/android/PycharmProjects/Practice/Demonstration/demapp/model
+2023-09-14 17:15:27,764 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-14 17:15:28,569 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-09-14 17:15:28,676 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-09-14 17:15:28,676 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-09-14 17:15:28,677 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-09-14 17:15:28,677 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-09-14 17:15:38,569 PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+2023-09-14 17:15:38,569 PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 41 1310
+2023-09-14 17:15:38,569 PIL.Image    DEBUG    Importing BlpImagePlugin
+2023-09-14 17:15:38,570 PIL.Image    DEBUG    Importing BmpImagePlugin
+2023-09-14 17:15:38,570 PIL.Image    DEBUG    Importing BufrStubImagePlugin
+2023-09-14 17:15:38,570 PIL.Image    DEBUG    Importing CurImagePlugin
+2023-09-14 17:15:38,570 PIL.Image    DEBUG    Importing DcxImagePlugin
+2023-09-14 17:15:38,571 PIL.Image    DEBUG    Importing DdsImagePlugin
+2023-09-14 17:15:38,571 PIL.Image    DEBUG    Importing EpsImagePlugin
+2023-09-14 17:15:38,571 PIL.Image    DEBUG    Importing FitsImagePlugin
+2023-09-14 17:15:38,572 PIL.Image    DEBUG    Importing FitsStubImagePlugin
+2023-09-14 17:15:38,572 PIL.Image    DEBUG    Importing FliImagePlugin
+2023-09-14 17:15:38,572 PIL.Image    DEBUG    Importing FpxImagePlugin
+2023-09-14 17:15:38,573 PIL.Image    DEBUG    Importing FtexImagePlugin
+2023-09-14 17:15:38,573 PIL.Image    DEBUG    Importing GbrImagePlugin
+2023-09-14 17:15:38,573 PIL.Image    DEBUG    Importing GifImagePlugin
+2023-09-14 17:15:38,573 PIL.Image    DEBUG    Importing GribStubImagePlugin
+2023-09-14 17:15:38,574 PIL.Image    DEBUG    Importing Hdf5StubImagePlugin
+2023-09-14 17:15:38,574 PIL.Image    DEBUG    Importing IcnsImagePlugin
+2023-09-14 17:15:38,574 PIL.Image    DEBUG    Importing IcoImagePlugin
+2023-09-14 17:15:38,575 PIL.Image    DEBUG    Importing ImImagePlugin
+2023-09-14 17:15:38,575 PIL.Image    DEBUG    Importing ImtImagePlugin
+2023-09-14 17:15:38,575 PIL.Image    DEBUG    Importing IptcImagePlugin
+2023-09-14 17:15:38,575 PIL.Image    DEBUG    Importing JpegImagePlugin
+2023-09-14 17:15:38,575 PIL.Image    DEBUG    Importing Jpeg2KImagePlugin
+2023-09-14 17:15:38,576 PIL.Image    DEBUG    Importing McIdasImagePlugin
+2023-09-14 17:15:38,576 PIL.Image    DEBUG    Importing MicImagePlugin
+2023-09-14 17:15:38,576 PIL.Image    DEBUG    Importing MpegImagePlugin
+2023-09-14 17:15:38,576 PIL.Image    DEBUG    Importing MpoImagePlugin
+2023-09-14 17:15:38,576 PIL.Image    DEBUG    Importing MspImagePlugin
+2023-09-14 17:15:38,576 PIL.Image    DEBUG    Importing PalmImagePlugin
+2023-09-14 17:15:38,577 PIL.Image    DEBUG    Importing PcdImagePlugin
+2023-09-14 17:15:38,577 PIL.Image    DEBUG    Importing PcxImagePlugin
+2023-09-14 17:15:38,577 PIL.Image    DEBUG    Importing PdfImagePlugin
+2023-09-14 17:15:38,581 PIL.Image    DEBUG    Importing PixarImagePlugin
+2023-09-14 17:15:38,581 PIL.Image    DEBUG    Importing PngImagePlugin
+2023-09-14 17:15:38,581 PIL.Image    DEBUG    Importing PpmImagePlugin
+2023-09-14 17:15:38,581 PIL.Image    DEBUG    Importing PsdImagePlugin
+2023-09-14 17:15:38,581 PIL.Image    DEBUG    Importing SgiImagePlugin
+2023-09-14 17:15:38,581 PIL.Image    DEBUG    Importing SpiderImagePlugin
+2023-09-14 17:15:38,581 PIL.Image    DEBUG    Image: failed to import SpiderImagePlugin: No module named 'PIL.SpiderImagePlugin'
+2023-09-14 17:15:38,581 PIL.Image    DEBUG    Importing SunImagePlugin
+2023-09-14 17:15:38,582 PIL.Image    DEBUG    Importing TgaImagePlugin
+2023-09-14 17:15:38,582 PIL.Image    DEBUG    Importing TiffImagePlugin
+2023-09-14 17:15:38,582 PIL.Image    DEBUG    Importing WebPImagePlugin
+2023-09-14 17:15:38,583 PIL.Image    DEBUG    Importing WmfImagePlugin
+2023-09-14 17:15:38,583 PIL.Image    DEBUG    Importing XbmImagePlugin
+2023-09-14 17:15:38,584 PIL.Image    DEBUG    Importing XpmImagePlugin
+2023-09-14 17:15:38,584 PIL.Image    DEBUG    Importing XVThumbImagePlugin
+2023-09-14 17:15:38,585 PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+2023-09-14 17:15:38,585 PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 41 1310
+2023-09-14 17:15:38,620 django.request ERROR    Internal Server Error: /home/
+Traceback (most recent call last):
+  File "/home/android/.local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/Practice/Demonstration/demapp/views.py", line 94, in use_nn
+    model_loaded = keras.models.load_model('/home/android/PycharmProjects/Practice/Demonstration/demapp/model/')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/lib/python3.11/site-packages/keras/src/saving/saving_api.py", line 238, in load_model
+    return legacy_sm_saving_lib.load_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/lib/python3.11/site-packages/keras/src/utils/traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/home/android/.local/lib/python3.11/site-packages/keras/src/saving/legacy/save.py", line 234, in load_model
+    raise IOError(
+OSError: No file or directory found at /home/android/PycharmProjects/Practice/Demonstration/demapp/model/
+2023-09-14 17:15:51,684 django.utils.autoreload INFO     /home/android/Practice/Demonstration/demapp/views.py changed, reloading.
+2023-09-14 17:15:52,211 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-14 17:15:53,037 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-09-14 17:15:53,147 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-09-14 17:15:53,147 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-09-14 17:15:53,147 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-09-14 17:15:53,147 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-09-14 17:15:57,964 PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+2023-09-14 17:15:57,965 PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 41 1310
+2023-09-14 17:15:57,965 PIL.Image    DEBUG    Importing BlpImagePlugin
+2023-09-14 17:15:57,966 PIL.Image    DEBUG    Importing BmpImagePlugin
+2023-09-14 17:15:57,967 PIL.Image    DEBUG    Importing BufrStubImagePlugin
+2023-09-14 17:15:57,967 PIL.Image    DEBUG    Importing CurImagePlugin
+2023-09-14 17:15:57,967 PIL.Image    DEBUG    Importing DcxImagePlugin
+2023-09-14 17:15:57,968 PIL.Image    DEBUG    Importing DdsImagePlugin
+2023-09-14 17:15:57,968 PIL.Image    DEBUG    Importing EpsImagePlugin
+2023-09-14 17:15:57,969 PIL.Image    DEBUG    Importing FitsImagePlugin
+2023-09-14 17:15:57,969 PIL.Image    DEBUG    Importing FitsStubImagePlugin
+2023-09-14 17:15:57,969 PIL.Image    DEBUG    Importing FliImagePlugin
+2023-09-14 17:15:57,969 PIL.Image    DEBUG    Importing FpxImagePlugin
+2023-09-14 17:15:57,970 PIL.Image    DEBUG    Importing FtexImagePlugin
+2023-09-14 17:15:57,970 PIL.Image    DEBUG    Importing GbrImagePlugin
+2023-09-14 17:15:57,971 PIL.Image    DEBUG    Importing GifImagePlugin
+2023-09-14 17:15:57,971 PIL.Image    DEBUG    Importing GribStubImagePlugin
+2023-09-14 17:15:57,971 PIL.Image    DEBUG    Importing Hdf5StubImagePlugin
+2023-09-14 17:15:57,971 PIL.Image    DEBUG    Importing IcnsImagePlugin
+2023-09-14 17:15:57,972 PIL.Image    DEBUG    Importing IcoImagePlugin
+2023-09-14 17:15:57,972 PIL.Image    DEBUG    Importing ImImagePlugin
+2023-09-14 17:15:57,972 PIL.Image    DEBUG    Importing ImtImagePlugin
+2023-09-14 17:15:57,973 PIL.Image    DEBUG    Importing IptcImagePlugin
+2023-09-14 17:15:57,973 PIL.Image    DEBUG    Importing JpegImagePlugin
+2023-09-14 17:15:57,973 PIL.Image    DEBUG    Importing Jpeg2KImagePlugin
+2023-09-14 17:15:57,973 PIL.Image    DEBUG    Importing McIdasImagePlugin
+2023-09-14 17:15:57,973 PIL.Image    DEBUG    Importing MicImagePlugin
+2023-09-14 17:15:57,973 PIL.Image    DEBUG    Importing MpegImagePlugin
+2023-09-14 17:15:57,973 PIL.Image    DEBUG    Importing MpoImagePlugin
+2023-09-14 17:15:57,974 PIL.Image    DEBUG    Importing MspImagePlugin
+2023-09-14 17:15:57,974 PIL.Image    DEBUG    Importing PalmImagePlugin
+2023-09-14 17:15:57,975 PIL.Image    DEBUG    Importing PcdImagePlugin
+2023-09-14 17:15:57,975 PIL.Image    DEBUG    Importing PcxImagePlugin
+2023-09-14 17:15:57,975 PIL.Image    DEBUG    Importing PdfImagePlugin
+2023-09-14 17:15:57,978 PIL.Image    DEBUG    Importing PixarImagePlugin
+2023-09-14 17:15:57,978 PIL.Image    DEBUG    Importing PngImagePlugin
+2023-09-14 17:15:57,978 PIL.Image    DEBUG    Importing PpmImagePlugin
+2023-09-14 17:15:57,978 PIL.Image    DEBUG    Importing PsdImagePlugin
+2023-09-14 17:15:57,978 PIL.Image    DEBUG    Importing SgiImagePlugin
+2023-09-14 17:15:57,979 PIL.Image    DEBUG    Importing SpiderImagePlugin
+2023-09-14 17:15:57,979 PIL.Image    DEBUG    Image: failed to import SpiderImagePlugin: No module named 'PIL.SpiderImagePlugin'
+2023-09-14 17:15:57,979 PIL.Image    DEBUG    Importing SunImagePlugin
+2023-09-14 17:15:57,979 PIL.Image    DEBUG    Importing TgaImagePlugin
+2023-09-14 17:15:57,980 PIL.Image    DEBUG    Importing TiffImagePlugin
+2023-09-14 17:15:57,980 PIL.Image    DEBUG    Importing WebPImagePlugin
+2023-09-14 17:15:57,980 PIL.Image    DEBUG    Importing WmfImagePlugin
+2023-09-14 17:15:57,980 PIL.Image    DEBUG    Importing XbmImagePlugin
+2023-09-14 17:15:57,981 PIL.Image    DEBUG    Importing XpmImagePlugin
+2023-09-14 17:15:57,982 PIL.Image    DEBUG    Importing XVThumbImagePlugin
+2023-09-14 17:15:57,982 PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+2023-09-14 17:15:57,982 PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 41 1310
+2023-09-14 17:15:58,027 django.request ERROR    Internal Server Error: /home/
+Traceback (most recent call last):
+  File "/home/android/.local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/Practice/Demonstration/demapp/views.py", line 94, in use_nn
+    model_loaded = keras.models.load_model('/home/android/PycharmProjects/Practice/Demonstration/demapp/model')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/lib/python3.11/site-packages/keras/src/saving/saving_api.py", line 238, in load_model
+    return legacy_sm_saving_lib.load_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/lib/python3.11/site-packages/keras/src/utils/traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/home/android/.local/lib/python3.11/site-packages/keras/src/saving/legacy/save.py", line 234, in load_model
+    raise IOError(
+OSError: No file or directory found at /home/android/PycharmProjects/Practice/Demonstration/demapp/model
+2023-09-14 17:16:49,326 django.utils.autoreload INFO     /home/android/Practice/Demonstration/demapp/views.py changed, reloading.
+2023-09-14 17:16:49,811 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-14 17:16:50,636 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-09-14 17:16:50,749 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-09-14 17:16:50,749 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-09-14 17:16:50,749 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-09-14 17:16:50,749 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-09-14 17:16:58,811 PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+2023-09-14 17:16:58,811 PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 41 1310
+2023-09-14 17:16:58,811 PIL.Image    DEBUG    Importing BlpImagePlugin
+2023-09-14 17:16:58,812 PIL.Image    DEBUG    Importing BmpImagePlugin
+2023-09-14 17:16:58,813 PIL.Image    DEBUG    Importing BufrStubImagePlugin
+2023-09-14 17:16:58,813 PIL.Image    DEBUG    Importing CurImagePlugin
+2023-09-14 17:16:58,813 PIL.Image    DEBUG    Importing DcxImagePlugin
+2023-09-14 17:16:58,813 PIL.Image    DEBUG    Importing DdsImagePlugin
+2023-09-14 17:16:58,814 PIL.Image    DEBUG    Importing EpsImagePlugin
+2023-09-14 17:16:58,814 PIL.Image    DEBUG    Importing FitsImagePlugin
+2023-09-14 17:16:58,814 PIL.Image    DEBUG    Importing FitsStubImagePlugin
+2023-09-14 17:16:58,814 PIL.Image    DEBUG    Importing FliImagePlugin
+2023-09-14 17:16:58,815 PIL.Image    DEBUG    Importing FpxImagePlugin
+2023-09-14 17:16:58,816 PIL.Image    DEBUG    Importing FtexImagePlugin
+2023-09-14 17:16:58,816 PIL.Image    DEBUG    Importing GbrImagePlugin
+2023-09-14 17:16:58,816 PIL.Image    DEBUG    Importing GifImagePlugin
+2023-09-14 17:16:58,816 PIL.Image    DEBUG    Importing GribStubImagePlugin
+2023-09-14 17:16:58,816 PIL.Image    DEBUG    Importing Hdf5StubImagePlugin
+2023-09-14 17:16:58,816 PIL.Image    DEBUG    Importing IcnsImagePlugin
+2023-09-14 17:16:58,817 PIL.Image    DEBUG    Importing IcoImagePlugin
+2023-09-14 17:16:58,817 PIL.Image    DEBUG    Importing ImImagePlugin
+2023-09-14 17:16:58,818 PIL.Image    DEBUG    Importing ImtImagePlugin
+2023-09-14 17:16:58,818 PIL.Image    DEBUG    Importing IptcImagePlugin
+2023-09-14 17:16:58,818 PIL.Image    DEBUG    Importing JpegImagePlugin
+2023-09-14 17:16:58,818 PIL.Image    DEBUG    Importing Jpeg2KImagePlugin
+2023-09-14 17:16:58,818 PIL.Image    DEBUG    Importing McIdasImagePlugin
+2023-09-14 17:16:58,818 PIL.Image    DEBUG    Importing MicImagePlugin
+2023-09-14 17:16:58,819 PIL.Image    DEBUG    Importing MpegImagePlugin
+2023-09-14 17:16:58,819 PIL.Image    DEBUG    Importing MpoImagePlugin
+2023-09-14 17:16:58,819 PIL.Image    DEBUG    Importing MspImagePlugin
+2023-09-14 17:16:58,819 PIL.Image    DEBUG    Importing PalmImagePlugin
+2023-09-14 17:16:58,820 PIL.Image    DEBUG    Importing PcdImagePlugin
+2023-09-14 17:16:58,820 PIL.Image    DEBUG    Importing PcxImagePlugin
+2023-09-14 17:16:58,820 PIL.Image    DEBUG    Importing PdfImagePlugin
+2023-09-14 17:16:58,823 PIL.Image    DEBUG    Importing PixarImagePlugin
+2023-09-14 17:16:58,824 PIL.Image    DEBUG    Importing PngImagePlugin
+2023-09-14 17:16:58,824 PIL.Image    DEBUG    Importing PpmImagePlugin
+2023-09-14 17:16:58,824 PIL.Image    DEBUG    Importing PsdImagePlugin
+2023-09-14 17:16:58,824 PIL.Image    DEBUG    Importing SgiImagePlugin
+2023-09-14 17:16:58,824 PIL.Image    DEBUG    Importing SpiderImagePlugin
+2023-09-14 17:16:58,824 PIL.Image    DEBUG    Image: failed to import SpiderImagePlugin: No module named 'PIL.SpiderImagePlugin'
+2023-09-14 17:16:58,824 PIL.Image    DEBUG    Importing SunImagePlugin
+2023-09-14 17:16:58,824 PIL.Image    DEBUG    Importing TgaImagePlugin
+2023-09-14 17:16:58,825 PIL.Image    DEBUG    Importing TiffImagePlugin
+2023-09-14 17:16:58,825 PIL.Image    DEBUG    Importing WebPImagePlugin
+2023-09-14 17:16:58,825 PIL.Image    DEBUG    Importing WmfImagePlugin
+2023-09-14 17:16:58,825 PIL.Image    DEBUG    Importing XbmImagePlugin
+2023-09-14 17:16:58,826 PIL.Image    DEBUG    Importing XpmImagePlugin
+2023-09-14 17:16:58,826 PIL.Image    DEBUG    Importing XVThumbImagePlugin
+2023-09-14 17:16:58,827 PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+2023-09-14 17:16:58,827 PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 41 1310
+2023-09-14 17:16:58,864 django.request ERROR    Internal Server Error: /home/
+Traceback (most recent call last):
+  File "/home/android/.local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/Practice/Demonstration/demapp/views.py", line 94, in use_nn
+    model_loaded = keras.models.load_model('/model')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/lib/python3.11/site-packages/keras/src/saving/saving_api.py", line 238, in load_model
+    return legacy_sm_saving_lib.load_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/lib/python3.11/site-packages/keras/src/utils/traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/home/android/.local/lib/python3.11/site-packages/keras/src/saving/legacy/save.py", line 234, in load_model
+    raise IOError(
+OSError: No file or directory found at /model
+2023-09-14 17:18:12,122 django.utils.autoreload INFO     /home/android/Practice/Demonstration/demapp/views.py changed, reloading.
+2023-09-14 17:18:12,609 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-14 17:18:13,412 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-09-14 17:18:13,518 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-09-14 17:18:13,518 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-09-14 17:18:13,518 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-09-14 17:18:13,518 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-09-14 17:18:19,952 PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+2023-09-14 17:18:19,952 PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 41 1310
+2023-09-14 17:18:19,952 PIL.Image    DEBUG    Importing BlpImagePlugin
+2023-09-14 17:18:19,953 PIL.Image    DEBUG    Importing BmpImagePlugin
+2023-09-14 17:18:19,953 PIL.Image    DEBUG    Importing BufrStubImagePlugin
+2023-09-14 17:18:19,954 PIL.Image    DEBUG    Importing CurImagePlugin
+2023-09-14 17:18:19,954 PIL.Image    DEBUG    Importing DcxImagePlugin
+2023-09-14 17:18:19,954 PIL.Image    DEBUG    Importing DdsImagePlugin
+2023-09-14 17:18:19,954 PIL.Image    DEBUG    Importing EpsImagePlugin
+2023-09-14 17:18:19,955 PIL.Image    DEBUG    Importing FitsImagePlugin
+2023-09-14 17:18:19,955 PIL.Image    DEBUG    Importing FitsStubImagePlugin
+2023-09-14 17:18:19,956 PIL.Image    DEBUG    Importing FliImagePlugin
+2023-09-14 17:18:19,956 PIL.Image    DEBUG    Importing FpxImagePlugin
+2023-09-14 17:18:19,957 PIL.Image    DEBUG    Importing FtexImagePlugin
+2023-09-14 17:18:19,958 PIL.Image    DEBUG    Importing GbrImagePlugin
+2023-09-14 17:18:19,958 PIL.Image    DEBUG    Importing GifImagePlugin
+2023-09-14 17:18:19,958 PIL.Image    DEBUG    Importing GribStubImagePlugin
+2023-09-14 17:18:19,958 PIL.Image    DEBUG    Importing Hdf5StubImagePlugin
+2023-09-14 17:18:19,958 PIL.Image    DEBUG    Importing IcnsImagePlugin
+2023-09-14 17:18:19,959 PIL.Image    DEBUG    Importing IcoImagePlugin
+2023-09-14 17:18:19,960 PIL.Image    DEBUG    Importing ImImagePlugin
+2023-09-14 17:18:19,960 PIL.Image    DEBUG    Importing ImtImagePlugin
+2023-09-14 17:18:19,961 PIL.Image    DEBUG    Importing IptcImagePlugin
+2023-09-14 17:18:19,961 PIL.Image    DEBUG    Importing JpegImagePlugin
+2023-09-14 17:18:19,961 PIL.Image    DEBUG    Importing Jpeg2KImagePlugin
+2023-09-14 17:18:19,961 PIL.Image    DEBUG    Importing McIdasImagePlugin
+2023-09-14 17:18:19,961 PIL.Image    DEBUG    Importing MicImagePlugin
+2023-09-14 17:18:19,962 PIL.Image    DEBUG    Importing MpegImagePlugin
+2023-09-14 17:18:19,962 PIL.Image    DEBUG    Importing MpoImagePlugin
+2023-09-14 17:18:19,962 PIL.Image    DEBUG    Importing MspImagePlugin
+2023-09-14 17:18:19,962 PIL.Image    DEBUG    Importing PalmImagePlugin
+2023-09-14 17:18:19,964 PIL.Image    DEBUG    Importing PcdImagePlugin
+2023-09-14 17:18:19,964 PIL.Image    DEBUG    Importing PcxImagePlugin
+2023-09-14 17:18:19,964 PIL.Image    DEBUG    Importing PdfImagePlugin
+2023-09-14 17:18:19,969 PIL.Image    DEBUG    Importing PixarImagePlugin
+2023-09-14 17:18:19,969 PIL.Image    DEBUG    Importing PngImagePlugin
+2023-09-14 17:18:19,969 PIL.Image    DEBUG    Importing PpmImagePlugin
+2023-09-14 17:18:19,969 PIL.Image    DEBUG    Importing PsdImagePlugin
+2023-09-14 17:18:19,969 PIL.Image    DEBUG    Importing SgiImagePlugin
+2023-09-14 17:18:19,969 PIL.Image    DEBUG    Importing SpiderImagePlugin
+2023-09-14 17:18:19,970 PIL.Image    DEBUG    Image: failed to import SpiderImagePlugin: No module named 'PIL.SpiderImagePlugin'
+2023-09-14 17:18:19,970 PIL.Image    DEBUG    Importing SunImagePlugin
+2023-09-14 17:18:19,970 PIL.Image    DEBUG    Importing TgaImagePlugin
+2023-09-14 17:18:19,970 PIL.Image    DEBUG    Importing TiffImagePlugin
+2023-09-14 17:18:19,970 PIL.Image    DEBUG    Importing WebPImagePlugin
+2023-09-14 17:18:19,971 PIL.Image    DEBUG    Importing WmfImagePlugin
+2023-09-14 17:18:19,971 PIL.Image    DEBUG    Importing XbmImagePlugin
+2023-09-14 17:18:19,972 PIL.Image    DEBUG    Importing XpmImagePlugin
+2023-09-14 17:18:19,973 PIL.Image    DEBUG    Importing XVThumbImagePlugin
+2023-09-14 17:18:19,973 PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+2023-09-14 17:18:19,973 PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 41 1310
+2023-09-14 17:18:20,019 django.request ERROR    Internal Server Error: /home/
+Traceback (most recent call last):
+  File "/home/android/.local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/Practice/Demonstration/demapp/views.py", line 94, in use_nn
+    model_loaded = keras.saving.load_model('/model')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/lib/python3.11/site-packages/keras/src/saving/saving_api.py", line 238, in load_model
+    return legacy_sm_saving_lib.load_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/lib/python3.11/site-packages/keras/src/utils/traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/home/android/.local/lib/python3.11/site-packages/keras/src/saving/legacy/save.py", line 234, in load_model
+    raise IOError(
+OSError: No file or directory found at /model
+2023-09-14 17:18:38,639 django.utils.autoreload INFO     /home/android/Practice/Demonstration/demapp/views.py changed, reloading.
+2023-09-14 17:18:39,176 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-14 17:18:39,998 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-09-14 17:18:40,105 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-09-14 17:18:40,105 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-09-14 17:18:40,105 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-09-14 17:18:40,105 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-09-14 17:18:44,558 PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+2023-09-14 17:18:44,558 PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 41 1310
+2023-09-14 17:18:44,558 PIL.Image    DEBUG    Importing BlpImagePlugin
+2023-09-14 17:18:44,559 PIL.Image    DEBUG    Importing BmpImagePlugin
+2023-09-14 17:18:44,559 PIL.Image    DEBUG    Importing BufrStubImagePlugin
+2023-09-14 17:18:44,559 PIL.Image    DEBUG    Importing CurImagePlugin
+2023-09-14 17:18:44,559 PIL.Image    DEBUG    Importing DcxImagePlugin
+2023-09-14 17:18:44,560 PIL.Image    DEBUG    Importing DdsImagePlugin
+2023-09-14 17:18:44,560 PIL.Image    DEBUG    Importing EpsImagePlugin
+2023-09-14 17:18:44,560 PIL.Image    DEBUG    Importing FitsImagePlugin
+2023-09-14 17:18:44,561 PIL.Image    DEBUG    Importing FitsStubImagePlugin
+2023-09-14 17:18:44,561 PIL.Image    DEBUG    Importing FliImagePlugin
+2023-09-14 17:18:44,561 PIL.Image    DEBUG    Importing FpxImagePlugin
+2023-09-14 17:18:44,562 PIL.Image    DEBUG    Importing FtexImagePlugin
+2023-09-14 17:18:44,562 PIL.Image    DEBUG    Importing GbrImagePlugin
+2023-09-14 17:18:44,563 PIL.Image    DEBUG    Importing GifImagePlugin
+2023-09-14 17:18:44,563 PIL.Image    DEBUG    Importing GribStubImagePlugin
+2023-09-14 17:18:44,563 PIL.Image    DEBUG    Importing Hdf5StubImagePlugin
+2023-09-14 17:18:44,563 PIL.Image    DEBUG    Importing IcnsImagePlugin
+2023-09-14 17:18:44,564 PIL.Image    DEBUG    Importing IcoImagePlugin
+2023-09-14 17:18:44,564 PIL.Image    DEBUG    Importing ImImagePlugin
+2023-09-14 17:18:44,564 PIL.Image    DEBUG    Importing ImtImagePlugin
+2023-09-14 17:18:44,564 PIL.Image    DEBUG    Importing IptcImagePlugin
+2023-09-14 17:18:44,565 PIL.Image    DEBUG    Importing JpegImagePlugin
+2023-09-14 17:18:44,565 PIL.Image    DEBUG    Importing Jpeg2KImagePlugin
+2023-09-14 17:18:44,565 PIL.Image    DEBUG    Importing McIdasImagePlugin
+2023-09-14 17:18:44,565 PIL.Image    DEBUG    Importing MicImagePlugin
+2023-09-14 17:18:44,565 PIL.Image    DEBUG    Importing MpegImagePlugin
+2023-09-14 17:18:44,565 PIL.Image    DEBUG    Importing MpoImagePlugin
+2023-09-14 17:18:44,566 PIL.Image    DEBUG    Importing MspImagePlugin
+2023-09-14 17:18:44,566 PIL.Image    DEBUG    Importing PalmImagePlugin
+2023-09-14 17:18:44,566 PIL.Image    DEBUG    Importing PcdImagePlugin
+2023-09-14 17:18:44,567 PIL.Image    DEBUG    Importing PcxImagePlugin
+2023-09-14 17:18:44,567 PIL.Image    DEBUG    Importing PdfImagePlugin
+2023-09-14 17:18:44,570 PIL.Image    DEBUG    Importing PixarImagePlugin
+2023-09-14 17:18:44,570 PIL.Image    DEBUG    Importing PngImagePlugin
+2023-09-14 17:18:44,570 PIL.Image    DEBUG    Importing PpmImagePlugin
+2023-09-14 17:18:44,570 PIL.Image    DEBUG    Importing PsdImagePlugin
+2023-09-14 17:18:44,570 PIL.Image    DEBUG    Importing SgiImagePlugin
+2023-09-14 17:18:44,571 PIL.Image    DEBUG    Importing SpiderImagePlugin
+2023-09-14 17:18:44,571 PIL.Image    DEBUG    Image: failed to import SpiderImagePlugin: No module named 'PIL.SpiderImagePlugin'
+2023-09-14 17:18:44,571 PIL.Image    DEBUG    Importing SunImagePlugin
+2023-09-14 17:18:44,571 PIL.Image    DEBUG    Importing TgaImagePlugin
+2023-09-14 17:18:44,571 PIL.Image    DEBUG    Importing TiffImagePlugin
+2023-09-14 17:18:44,571 PIL.Image    DEBUG    Importing WebPImagePlugin
+2023-09-14 17:18:44,572 PIL.Image    DEBUG    Importing WmfImagePlugin
+2023-09-14 17:18:44,572 PIL.Image    DEBUG    Importing XbmImagePlugin
+2023-09-14 17:18:44,573 PIL.Image    DEBUG    Importing XpmImagePlugin
+2023-09-14 17:18:44,573 PIL.Image    DEBUG    Importing XVThumbImagePlugin
+2023-09-14 17:18:44,574 PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+2023-09-14 17:18:44,574 PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 41 1310
+2023-09-14 17:18:44,612 django.request ERROR    Internal Server Error: /home/
+Traceback (most recent call last):
+  File "/home/android/.local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/Practice/Demonstration/demapp/views.py", line 94, in use_nn
+    model_loaded = keras.saving.load_model("/model")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/lib/python3.11/site-packages/keras/src/saving/saving_api.py", line 238, in load_model
+    return legacy_sm_saving_lib.load_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/lib/python3.11/site-packages/keras/src/utils/traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/home/android/.local/lib/python3.11/site-packages/keras/src/saving/legacy/save.py", line 234, in load_model
+    raise IOError(
+OSError: No file or directory found at /model
+2023-09-14 17:19:49,527 django.utils.autoreload INFO     /home/android/Practice/Demonstration/demapp/views.py changed, reloading.
+2023-09-14 17:19:50,024 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-14 17:19:50,845 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-09-14 17:19:50,953 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-09-14 17:19:50,953 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-09-14 17:19:50,953 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-09-14 17:19:50,953 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-09-14 17:19:56,920 PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+2023-09-14 17:19:56,920 PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 41 1310
+2023-09-14 17:19:56,920 PIL.Image    DEBUG    Importing BlpImagePlugin
+2023-09-14 17:19:56,921 PIL.Image    DEBUG    Importing BmpImagePlugin
+2023-09-14 17:19:56,921 PIL.Image    DEBUG    Importing BufrStubImagePlugin
+2023-09-14 17:19:56,922 PIL.Image    DEBUG    Importing CurImagePlugin
+2023-09-14 17:19:56,922 PIL.Image    DEBUG    Importing DcxImagePlugin
+2023-09-14 17:19:56,922 PIL.Image    DEBUG    Importing DdsImagePlugin
+2023-09-14 17:19:56,923 PIL.Image    DEBUG    Importing EpsImagePlugin
+2023-09-14 17:19:56,923 PIL.Image    DEBUG    Importing FitsImagePlugin
+2023-09-14 17:19:56,923 PIL.Image    DEBUG    Importing FitsStubImagePlugin
+2023-09-14 17:19:56,924 PIL.Image    DEBUG    Importing FliImagePlugin
+2023-09-14 17:19:56,924 PIL.Image    DEBUG    Importing FpxImagePlugin
+2023-09-14 17:19:56,925 PIL.Image    DEBUG    Importing FtexImagePlugin
+2023-09-14 17:19:56,925 PIL.Image    DEBUG    Importing GbrImagePlugin
+2023-09-14 17:19:56,925 PIL.Image    DEBUG    Importing GifImagePlugin
+2023-09-14 17:19:56,925 PIL.Image    DEBUG    Importing GribStubImagePlugin
+2023-09-14 17:19:56,926 PIL.Image    DEBUG    Importing Hdf5StubImagePlugin
+2023-09-14 17:19:56,926 PIL.Image    DEBUG    Importing IcnsImagePlugin
+2023-09-14 17:19:56,926 PIL.Image    DEBUG    Importing IcoImagePlugin
+2023-09-14 17:19:56,927 PIL.Image    DEBUG    Importing ImImagePlugin
+2023-09-14 17:19:56,927 PIL.Image    DEBUG    Importing ImtImagePlugin
+2023-09-14 17:19:56,927 PIL.Image    DEBUG    Importing IptcImagePlugin
+2023-09-14 17:19:56,927 PIL.Image    DEBUG    Importing JpegImagePlugin
+2023-09-14 17:19:56,927 PIL.Image    DEBUG    Importing Jpeg2KImagePlugin
+2023-09-14 17:19:56,927 PIL.Image    DEBUG    Importing McIdasImagePlugin
+2023-09-14 17:19:56,928 PIL.Image    DEBUG    Importing MicImagePlugin
+2023-09-14 17:19:56,928 PIL.Image    DEBUG    Importing MpegImagePlugin
+2023-09-14 17:19:56,928 PIL.Image    DEBUG    Importing MpoImagePlugin
+2023-09-14 17:19:56,928 PIL.Image    DEBUG    Importing MspImagePlugin
+2023-09-14 17:19:56,928 PIL.Image    DEBUG    Importing PalmImagePlugin
+2023-09-14 17:19:56,929 PIL.Image    DEBUG    Importing PcdImagePlugin
+2023-09-14 17:19:56,929 PIL.Image    DEBUG    Importing PcxImagePlugin
+2023-09-14 17:19:56,929 PIL.Image    DEBUG    Importing PdfImagePlugin
+2023-09-14 17:19:56,932 PIL.Image    DEBUG    Importing PixarImagePlugin
+2023-09-14 17:19:56,933 PIL.Image    DEBUG    Importing PngImagePlugin
+2023-09-14 17:19:56,933 PIL.Image    DEBUG    Importing PpmImagePlugin
+2023-09-14 17:19:56,933 PIL.Image    DEBUG    Importing PsdImagePlugin
+2023-09-14 17:19:56,933 PIL.Image    DEBUG    Importing SgiImagePlugin
+2023-09-14 17:19:56,933 PIL.Image    DEBUG    Importing SpiderImagePlugin
+2023-09-14 17:19:56,933 PIL.Image    DEBUG    Image: failed to import SpiderImagePlugin: No module named 'PIL.SpiderImagePlugin'
+2023-09-14 17:19:56,933 PIL.Image    DEBUG    Importing SunImagePlugin
+2023-09-14 17:19:56,934 PIL.Image    DEBUG    Importing TgaImagePlugin
+2023-09-14 17:19:56,934 PIL.Image    DEBUG    Importing TiffImagePlugin
+2023-09-14 17:19:56,934 PIL.Image    DEBUG    Importing WebPImagePlugin
+2023-09-14 17:19:56,935 PIL.Image    DEBUG    Importing WmfImagePlugin
+2023-09-14 17:19:56,935 PIL.Image    DEBUG    Importing XbmImagePlugin
+2023-09-14 17:19:56,936 PIL.Image    DEBUG    Importing XpmImagePlugin
+2023-09-14 17:19:56,936 PIL.Image    DEBUG    Importing XVThumbImagePlugin
+2023-09-14 17:19:56,937 PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+2023-09-14 17:19:56,937 PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 41 1310
+2023-09-14 17:20:38,177 PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+2023-09-14 17:20:38,177 PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 41 1310
+2023-09-14 17:20:38,177 PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+2023-09-14 17:20:38,177 PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 41 1310
