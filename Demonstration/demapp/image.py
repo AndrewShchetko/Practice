@@ -18,3 +18,11 @@ def get_img_dataset(dataset=train_dataset) -> npt.DTypeLike:
 
 
 images_arr = get_img_dataset(train_dataset)
+
+
+def resize_img(img_arr: npt.DTypeLike) -> npt.DTypeLike:
+    resized_images: npt.DTypeLike = np.empty((img_arr.shape[0],*SIZEIMG))
+    for i in range(img_arr.shape[0]):
+        image = Image.fromarray(img_arr[i], mode='L')
+        resized_images[i] = np.asarray(image.resize(SIZEIMG))
+    return resized_images
