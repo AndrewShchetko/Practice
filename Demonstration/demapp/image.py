@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import numpy.typing as npt
 
-SIZEIMG = (244, 244)
+SIZEIMG = (224, 224)
 
 train_dataset = pd.read_csv("train.csv")
 test_dataset = pd.read_csv("test.csv")
