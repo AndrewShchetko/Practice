@@ -13,6 +13,10 @@ test_dataset = pd.read_csv("test.csv")
 
 
 def get_img_dataset(dataset: pd.DataFrame = train_dataset) -> np.ndarray:
+    """
+    Get image from string format.
+    Another shit function.
+    """
     image_df: pd.DataFrame = dataset[' pixels'].copy()
     for i in range(len(image_df)):
         image_df[i] = np.fromstring(image_df[i], dtype=np.uint8, sep=' ')
