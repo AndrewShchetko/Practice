@@ -4,7 +4,9 @@ import numpy as np
 import os
 import os.path
 
-SIZEIMG = (224, 224)
+SIZEIMAGE: tuple[int, int] = (224, 224)
+COUNTIMAGE: int = 28709
+DIRECTORY: str = "data/train/"  # Image directory
 
 train_dataset = pd.read_csv("train.csv")
 test_dataset = pd.read_csv("test.csv")
