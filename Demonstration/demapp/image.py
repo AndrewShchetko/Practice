@@ -33,3 +33,43 @@ def resize_img(img_arr: np.ndarray) -> np.ndarray:
         image = Image.fromarray(img_arr[i], mode='L')
         resized_images[i] = np.asarray(image.resize(SIZEIMAGE))
     return resized_images
+
+
+resized_images = resize_img(images_arr)
+
+
+def save_images(image_arr: np.ndarray, dataset: pd.DataFrame) -> None:
+    """
+    Save images png format in DIRECTORY
+    File name: {index file in dataset}_{emotion}.png
+    """
+    filenames: list[str] = [DIRECTORY + str(i) + "_" + str(dataset.iloc[i, 0]) + ".png"
+                            for i in range(dataset.shape[0])]
+    for i in range(image_arr.shape[0]):
+        image = Image.fromarray(image_arr[i], mode='L')
+        image.save(filenames[i])
+
+
+save_images(resized_images, train_dataset)
+
+
+def get_img_dir() -> pd.DataFrame:  # MY COMPUTER FREEZES CAUSE OF THIS PIECE OF SHIT
+    """
+    This is shit function for fucking dataset of fucking coursework.
+    Read images from DIRECTORY and return dataframe.
+    """
+    images_arr: np.ndarray = np.empty((COUNTIMAGE, *SIZEIMAGE))
+    emotion: np.ndarray = np.empty(COUNTIMAGE)
+    count_image = 0
+    for filename in os.listdir(DIRECTORY):
+        f = os.path.join(DIRECTORY, filename)
+        image = Image.open(f)
+        images_arr[count_image] = np.asarray(image)
+        emotion[count_image] = int(filename.split(".")[0].split("_")[1])
+        # split string like [0_0 , .png] then [0,0]
+        count_image += 1
+
+    return pd.DataFrame(data=[emotion.T, pd.DataFrame(images_arr)])
+
+# data = get_img_dir()
+# print(data)
