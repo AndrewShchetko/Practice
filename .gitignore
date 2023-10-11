@@ -2,3 +2,4 @@
 venv/
 demapp/test.csv
 demapp/train.csv
+**/data/
