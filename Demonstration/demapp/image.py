@@ -27,13 +27,14 @@ def get_img_dataset(dataset: pd.DataFrame = train_dataset) -> np.ndarray:
 images_arr = get_img_dataset(train_dataset)
 
 
-def resize_img(img_arr: np.ndarray) -> np.ndarray:
-    resized_images: np.ndarray = np.empty((COUNTIMAGE, *SIZEIMAGE))
+def resize_img_generator(img_arr: np.ndarray) -> Iterator[np.ndarray]:
+    """
+    Return generator with resized image
+    """
     for i in range(img_arr.shape[0]):
-        image = Image.fromarray(img_arr[i], mode='L')
-        resized_images[i] = np.asarray(image.resize(SIZEIMAGE))
-    return resized_images
-
+        cv_image = cv2.cvtColor(img_arr[i], cv2.IMREAD_GRAYSCALE)
+        resized_img = cv2.resize(cv_image, SIZEIMAGE)
+        yield resized_img
 
 resized_images = resize_img(images_arr)
 
