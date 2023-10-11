@@ -51,23 +51,12 @@ def save_images(img_arr: np.ndarray, dataset: pd.DataFrame) -> None:
 save_images(resized_images, train_dataset)
 
 
-def get_img_dir() -> pd.DataFrame:  # MY COMPUTER FREEZES CAUSE OF THIS PIECE OF SHIT
+def get_img_dir_generator() -> Iterator[tuple[int, pd.DataFrame]]:
     """
-    This is shit function for fucking dataset of fucking coursework.
     Read images from DIRECTORY and return dataframe.
     """
-    images_arr: np.ndarray = np.empty((COUNTIMAGE, *SIZEIMAGE))
-    emotion: np.ndarray = np.empty(COUNTIMAGE)
-    count_image = 0
-    for filename in os.listdir(DIRECTORY):
-        f = os.path.join(DIRECTORY, filename)
-        image = Image.open(f)
-        images_arr[count_image] = np.asarray(image)
-        emotion[count_image] = int(filename.split(".")[0].split("_")[1])
-        # split string like [0_0 , .png] then [0,0]
-        count_image += 1
-
-    return pd.DataFrame(data=[emotion.T, pd.DataFrame(images_arr)])
-
-# data = get_img_dir()
-# print(data)
+    p = Path(DIRECTORY)
+    for file in p.iterdir():
+        image = cv2.imread(str(file))
+        emotion = int(file.name.split(".")[0].split("_")[1])
+        yield emotion, np.asarray(image)
