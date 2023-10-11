@@ -1,8 +1,8 @@
-from PIL import Image
+from typing import Iterator
+from pathlib import Path
 import pandas as pd
 import numpy as np
-import os
-import os.path
+import cv2
 
 SIZEIMAGE: tuple[int, int] = (224, 224)
 COUNTIMAGE: int = 28709
