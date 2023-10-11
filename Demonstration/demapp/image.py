@@ -24,9 +24,6 @@ def get_img_dataset(dataset: pd.DataFrame = train_dataset) -> np.ndarray:
     return np.stack(image_df.to_numpy())
 
 
-images_arr = get_img_dataset(train_dataset)
-
-
 def resize_img_generator(img_arr: np.ndarray) -> Iterator[np.ndarray]:
     """
     Return generator with resized image
@@ -48,12 +45,12 @@ def save_images(img_arr: np.ndarray, dataset: pd.DataFrame) -> None:
         cv2.imwrite(filenames[item], image)
 
 
-save_images(resized_images, train_dataset)
+save_images(get_img_dataset(train_dataset), train_dataset)
 
 
 def get_img_dir_generator() -> Iterator[tuple[int, pd.DataFrame]]:
     """
-    Read images from DIRECTORY and return dataframe.
+    Read images from DIRECTORY and return emotion and image.
     """
     p = Path(DIRECTORY)
     for file in p.iterdir():
