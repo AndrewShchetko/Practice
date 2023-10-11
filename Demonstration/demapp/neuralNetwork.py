@@ -29,14 +29,30 @@ y_train_categorical = keras.utils.to_categorical(y_train, 7)
 y_test_categorical = keras.utils.to_categorical(y_test, 7)
 
 model = keras.Sequential([
-    Conv2D(96, (3, 3), padding='same', activation='relu', input_shape=(48, 48, 1)),
+    Conv2D(64, (3, 3), padding='same', activation='relu', input_shape=(224, 224, 1)),
+    Conv2D(64, (3, 3), padding='same', activation='relu'),
     MaxPooling2D(pool_size=(2, 2), strides=2),
-    Conv2D(192, (3, 3), padding='same', activation='relu'),
+    Conv2D(128, (3, 3), padding='same', activation='relu'),
+    Conv2D(128, (3, 3), padding='same', activation='relu'),
     MaxPooling2D(pool_size=(2, 2), strides=2),
-    Conv2D(384, (3, 3), padding='same', activation='relu'),
+    Conv2D(256, (3, 3), padding='same', activation='relu'),
+    Conv2D(256, (3, 3), padding='same', activation='relu'),
+    Conv2D(256, (3, 3), padding='same', activation='relu'),
+    Conv2D(256, (3, 3), padding='same', activation='relu'),
+    MaxPooling2D(pool_size=(2, 2), strides=2),
+    Conv2D(512, (3, 3), padding='same', activation='relu'),
+    Conv2D(512, (3, 3), padding='same', activation='relu'),
+    Conv2D(512, (3, 3), padding='same', activation='relu'),
+    Conv2D(512, (3, 3), padding='same', activation='relu'),
+    MaxPooling2D(pool_size=(2, 2), strides=2),
+    Conv2D(512, (3, 3), padding='same', activation='relu'),
+    Conv2D(512, (3, 3), padding='same', activation='relu'),
+    Conv2D(512, (3, 3), padding='same', activation='relu'),
+    Conv2D(512, (3, 3), padding='same', activation='relu'),
     MaxPooling2D(pool_size=(2, 2), strides=2),
     Flatten(),
-    Dense(128, activation='relu'),
+    Dense(4069, activation='relu'),
+    Dense(4069, activation='relu'),
     Dense(7, activation='softmax')
 ])
 
@@ -50,4 +66,3 @@ his = model.fit(x_train, y_train_categorical, batch_size=19, epochs=3, validatio
 model.save('model')
 # model_loaded = keras.models.load_model('model')
 # model.evaluate(x_test, y_test_categorical)
-

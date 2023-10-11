@@ -529,3 +529,60 @@ OSError: No file or directory found at /model
 2023-09-14 17:20:38,177 PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 41 1310
 2023-09-14 17:20:38,177 PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
 2023-09-14 17:20:38,177 PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 41 1310
+2023-09-30 09:40:51,377 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-30 09:41:06,561 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-09-30 09:41:08,507 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-09-30 09:41:08,507 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-09-30 09:41:08,507 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-09-30 09:41:08,507 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-09-30 09:42:17,843 PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+2023-09-30 09:42:17,844 PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 41 1310
+2023-09-30 09:42:17,844 PIL.Image    DEBUG    Importing BlpImagePlugin
+2023-09-30 09:42:17,847 PIL.Image    DEBUG    Importing BmpImagePlugin
+2023-09-30 09:42:17,847 PIL.Image    DEBUG    Importing BufrStubImagePlugin
+2023-09-30 09:42:17,848 PIL.Image    DEBUG    Importing CurImagePlugin
+2023-09-30 09:42:17,849 PIL.Image    DEBUG    Importing DcxImagePlugin
+2023-09-30 09:42:17,850 PIL.Image    DEBUG    Importing DdsImagePlugin
+2023-09-30 09:42:17,851 PIL.Image    DEBUG    Importing EpsImagePlugin
+2023-09-30 09:42:17,852 PIL.Image    DEBUG    Importing FitsImagePlugin
+2023-09-30 09:42:17,853 PIL.Image    DEBUG    Importing FitsStubImagePlugin
+2023-09-30 09:42:17,854 PIL.Image    DEBUG    Importing FliImagePlugin
+2023-09-30 09:42:17,854 PIL.Image    DEBUG    Importing FpxImagePlugin
+2023-09-30 09:42:17,887 PIL.Image    DEBUG    Importing FtexImagePlugin
+2023-09-30 09:42:17,888 PIL.Image    DEBUG    Importing GbrImagePlugin
+2023-09-30 09:42:17,888 PIL.Image    DEBUG    Importing GifImagePlugin
+2023-09-30 09:42:17,888 PIL.Image    DEBUG    Importing GribStubImagePlugin
+2023-09-30 09:42:17,889 PIL.Image    DEBUG    Importing Hdf5StubImagePlugin
+2023-09-30 09:42:17,889 PIL.Image    DEBUG    Importing IcnsImagePlugin
+2023-09-30 09:42:17,890 PIL.Image    DEBUG    Importing IcoImagePlugin
+2023-09-30 09:42:17,890 PIL.Image    DEBUG    Importing ImImagePlugin
+2023-09-30 09:42:17,891 PIL.Image    DEBUG    Importing ImtImagePlugin
+2023-09-30 09:42:17,891 PIL.Image    DEBUG    Importing IptcImagePlugin
+2023-09-30 09:42:17,891 PIL.Image    DEBUG    Importing JpegImagePlugin
+2023-09-30 09:42:17,891 PIL.Image    DEBUG    Importing Jpeg2KImagePlugin
+2023-09-30 09:42:17,892 PIL.Image    DEBUG    Importing McIdasImagePlugin
+2023-09-30 09:42:17,892 PIL.Image    DEBUG    Importing MicImagePlugin
+2023-09-30 09:42:17,892 PIL.Image    DEBUG    Importing MpegImagePlugin
+2023-09-30 09:42:17,892 PIL.Image    DEBUG    Importing MpoImagePlugin
+2023-09-30 09:42:17,893 PIL.Image    DEBUG    Importing MspImagePlugin
+2023-09-30 09:42:17,893 PIL.Image    DEBUG    Importing PalmImagePlugin
+2023-09-30 09:42:17,894 PIL.Image    DEBUG    Importing PcdImagePlugin
+2023-09-30 09:42:17,894 PIL.Image    DEBUG    Importing PcxImagePlugin
+2023-09-30 09:42:17,894 PIL.Image    DEBUG    Importing PdfImagePlugin
+2023-09-30 09:42:17,898 PIL.Image    DEBUG    Importing PixarImagePlugin
+2023-09-30 09:42:17,899 PIL.Image    DEBUG    Importing PngImagePlugin
+2023-09-30 09:42:17,899 PIL.Image    DEBUG    Importing PpmImagePlugin
+2023-09-30 09:42:17,899 PIL.Image    DEBUG    Importing PsdImagePlugin
+2023-09-30 09:42:17,899 PIL.Image    DEBUG    Importing SgiImagePlugin
+2023-09-30 09:42:17,899 PIL.Image    DEBUG    Importing SpiderImagePlugin
+2023-09-30 09:42:17,899 PIL.Image    DEBUG    Image: failed to import SpiderImagePlugin: No module named 'PIL.SpiderImagePlugin'
+2023-09-30 09:42:17,899 PIL.Image    DEBUG    Importing SunImagePlugin
+2023-09-30 09:42:17,900 PIL.Image    DEBUG    Importing TgaImagePlugin
+2023-09-30 09:42:17,900 PIL.Image    DEBUG    Importing TiffImagePlugin
+2023-09-30 09:42:17,900 PIL.Image    DEBUG    Importing WebPImagePlugin
+2023-09-30 09:42:17,911 PIL.Image    DEBUG    Importing WmfImagePlugin
+2023-09-30 09:42:17,911 PIL.Image    DEBUG    Importing XbmImagePlugin
+2023-09-30 09:42:17,912 PIL.Image    DEBUG    Importing XpmImagePlugin
+2023-09-30 09:42:17,912 PIL.Image    DEBUG    Importing XVThumbImagePlugin
+2023-09-30 09:42:17,913 PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+2023-09-30 09:42:17,913 PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 41 1310
