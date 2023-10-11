@@ -6,12 +6,12 @@ name = "pypi"
 [packages]
 django = "*"
 numpy = "*"
-pandas = "*"
 pillow = "*"
 tensorflow = "*"
 
 [dev-packages]
 opencv-python = "*"
+pandas = "*"
 
 [requires]
 python_version = "3.11"
