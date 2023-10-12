@@ -1,35 +1,26 @@
+from typing import Any
 import numpy as np
-import pandas as pd
 from tensorflow import keras
 from keras.layers import Dense, Flatten, Conv2D, MaxPooling2D
+from image import get_img_dir_generator
 
-emotions_train = pd.read_csv('train.csv')
-emotions_test = pd.read_csv('test.csv')
 
-x_train, y_train = emotions_train.pop(' pixels'), emotions_train.pop('emotion')
-x_test, y_test = emotions_test.pop(' pixels'), emotions_test.pop('emotion')
+def make_image_array(images: list, emotions: list, directory: str):
+    for emotion, img in get_img_dir_generator(directory):
+        emotions.append(emotion)
+        images.append(img)
+    images: Any = np.array(images)
+    emotions: Any = keras.utils.to_categorical(emotions, 7)
+    return images, emotions
 
-for i in range(len(x_train)):
-    x_train[i] = np.fromstring(x_train[i], dtype=np.uint8, sep=' ')
-    x_train[i] = np.reshape(x_train[i], (48, 48))
-x_train = x_train / 255
-x_train = x_train.values.tolist()
-x_train = np.array(x_train)
 
-for i in range(len(x_test)):
-    x_test[i] = np.fromstring(x_test[i], dtype=np.uint8, sep=' ')
-    x_test[i] = np.reshape(x_test[i], (48, 48))
-x_test = x_test / 255
-x_test = x_test.values.tolist()
-x_test = np.array(x_test)
-
-x_train = np.expand_dims(x_train, axis=3)
-x_test = np.expand_dims(x_test, axis=3)
-y_train_categorical = keras.utils.to_categorical(y_train, 7)
-y_test_categorical = keras.utils.to_categorical(y_test, 7)
+img_train, emotions_train_categorical = make_image_array([], [], 'data/train/')
+print(img_train.shape)
+img_test, emotions_test_categorical = make_image_array([], [], 'data/test/')
+print(img_test.shape)
 
 model = keras.Sequential([
-    Conv2D(64, (3, 3), padding='same', activation='relu', input_shape=(224, 224, 1)),
+    Conv2D(64, (3, 3), padding='same', activation='relu', input_shape=(224, 224, 3)),
     Conv2D(64, (3, 3), padding='same', activation='relu'),
     MaxPooling2D(pool_size=(2, 2), strides=2),
     Conv2D(128, (3, 3), padding='same', activation='relu'),
@@ -62,7 +53,7 @@ model.compile(
     metrics=['accuracy']
 )
 
-his = model.fit(x_train, y_train_categorical, batch_size=19, epochs=3, validation_split=0.2)
+his = model.fit(img_train, emotions_train_categorical, batch_size=19, epochs=3, validation_split=0.2)
 model.save('model')
-# model_loaded = keras.models.load_model('model')
-# model.evaluate(x_test, y_test_categorical)
+model_loaded = keras.models.load_model('model')
+model.evaluate(img_test, emotions_test_categorical)
