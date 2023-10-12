@@ -6,7 +6,7 @@ import cv2
 
 SIZEIMAGE: tuple[int, int] = (224, 224)
 COUNTIMAGE: int = 28709
-DIRECTORY: str = "data/train/"  # Image directory
+DIRECTORY: str = "data/test/"  # Image directory
 
 train_dataset = pd.read_csv("train.csv")
 test_dataset = pd.read_csv("test.csv")
@@ -45,7 +45,7 @@ def save_images(img_arr: np.ndarray, dataset: pd.DataFrame) -> None:
         cv2.imwrite(filenames[item], image)
 
 
-save_images(get_img_dataset(train_dataset), train_dataset)
+save_images(get_img_dataset(test_dataset), test_dataset)
 
 
 def get_img_dir_generator() -> Iterator[tuple[int, pd.DataFrame]]:
