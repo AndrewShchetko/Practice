@@ -71,7 +71,7 @@ def get_img_dir_generator(directory: str) -> Iterator[tuple[int, pd.DataFrame]]:
 =======
 def read_images_from_dir(directory: str) -> Iterator[tuple[str,int, pd.DataFrame]]:
     """
-    Read images from directory and return type of dataset, emotion and image.
+    Read images from directory and return type of dataset(subdirectory name), emotion and image.
     """
     p = Path(directory)
     for path in p.glob("*/*.png"):
