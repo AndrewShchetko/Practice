@@ -21,19 +21,19 @@ def get_pixel_array(dataset: pd.DataFrame) -> np.ndarray:
     return np.stack(image_df.to_numpy())
 
 
-def resize_images(img_arr: np.ndarray, image_format: str = 'gray') -> Iterator[np.ndarray]:
+def resize_images(images_array: np.ndarray, image_format: str = 'gray') -> Iterator[np.ndarray]:
     """
     Return generator with resized image rgb format
         
     Parameters
     ------------------------
-    img_arr: np.ndarray
+    images_array: np.ndarray
     image_format: {'gray', 'bgr', 'rgb'},  default ='gray'
     """
     image_formats = {'rbg': cv2.COLOR_GRAY2RGB, 'bgr': cv2.COLOR_GRAY2BGR, 'gray': cv2.IMREAD_GRAYSCALE}
 
-    for i in range(img_arr.shape[0]):
-        cv_image = cv2.cvtColor(img_arr[i], image_formats[image_format])
+    for i in range(images_array.shape[0]):
+        cv_image = cv2.cvtColor(images_array[i], image_formats[image_format])
         resized_img = cv2.resize(cv_image, SIZEIMAGE)
         yield resized_img
 
