@@ -38,14 +38,20 @@ def resize_images(img_arr: np.ndarray) -> Iterator[np.ndarray]:
         yield resized_img
 
 
-def save_images(img_arr: np.ndarray, dataset: pd.DataFrame) -> None:
+def save_images(dataset: pd.DataFrame, directory: str) -> None:
     """
-    Save images png format in DIRECTORY
-    File name: {index file in dataset}_{emotion}.png
+    Save images png format in directory
+    Path and file name: {directory}/{dataset[" Usage"].lower()}/{index file in dataset}_{emotion}.png
     """
-    filenames: list[str] = [DIRECTORY + str(i) + "_" + str(dataset.iloc[i, 0]) + ".png"
+    if "/" not in directory:
+        directory += "/"
+    img_arr = get_pixel_array(dataset)
+    Path(directory + dataset[" Usage"][0].lower() + "/").mkdir(parents=True, exist_ok=True)
+
+    filenames: list[str] = [directory + dataset[" Usage"][0].lower() + "/"
+                            + str(i) + "_" + str(dataset.iloc[i, 0]) + ".png"
                             for i in range(dataset.shape[0])]
-    for item, image in zip(range(COUNTIMAGE), resize_img_generator(img_arr)):
+    for item, image in zip(range(dataset.shape[0]), resize_images(img_arr)):
         cv2.imwrite(filenames[item], image)
 
 
