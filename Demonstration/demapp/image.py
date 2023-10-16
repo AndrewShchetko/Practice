@@ -55,6 +55,7 @@ def save_images(dataset: pd.DataFrame, directory: str) -> None:
         cv2.imwrite(filenames[item], image)
 
 
+<<<<<<< HEAD
 save_images(get_img_dataset(train_dataset), train_dataset)
 
 
@@ -67,3 +68,17 @@ def get_img_dir_generator(directory: str) -> Iterator[tuple[int, pd.DataFrame]]:
         image = cv2.imread(str(file))
         emotion = int(file.name.split(".")[0].split("_")[1])
         yield emotion, np.asarray(image)
+=======
+def read_images_from_dir(directory: str) -> Iterator[tuple[str,int, pd.DataFrame]]:
+    """
+    Read images from directory and return type of dataset, emotion and image.
+    """
+    p = Path(directory)
+    for path in p.glob("*/*.png"):
+        image = cv2.imread(str(path))
+        emotion = int(path.name.split(".")[0].split("_")[1])
+        yield str(path.parent).lstrip(directory + "/"), emotion, np.asarray(image)
+
+
+save_images(pd.concat([train_dataset, test_dataset], ignore_index=True), "data")
+>>>>>>> b5c0546 (fix(image)!: rewrite function get_img_dir_generator)
