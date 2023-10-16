@@ -28,7 +28,7 @@ def get_pixel_array(dataset: pd.DataFrame) -> np.ndarray:
     return np.stack(image_df.to_numpy())
 
 
-def resize_img_generator(img_arr: np.ndarray) -> Iterator[np.ndarray]:
+def resize_images(img_arr: np.ndarray) -> Iterator[np.ndarray]:
     """
     Return generator with resized image
     """
