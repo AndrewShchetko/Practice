@@ -30,10 +30,10 @@ def get_pixel_array(dataset: pd.DataFrame) -> np.ndarray:
 
 def resize_images(img_arr: np.ndarray) -> Iterator[np.ndarray]:
     """
-    Return generator with resized image
+    Return generator with resized image rgb format
     """
     for i in range(img_arr.shape[0]):
-        cv_image = cv2.cvtColor(img_arr[i], cv2.IMREAD_GRAYSCALE)
+        cv_image = cv2.cvtColor(img_arr[i], cv2.COLOR_GRAY2RGB)
         resized_img = cv2.resize(cv_image, SIZEIMAGE)
         yield resized_img
 
