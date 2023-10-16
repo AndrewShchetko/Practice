@@ -21,20 +21,33 @@ def get_pixel_array(dataset: pd.DataFrame) -> np.ndarray:
     return np.stack(image_df.to_numpy())
 
 
-def resize_images(img_arr: np.ndarray) -> Iterator[np.ndarray]:
+def resize_images(img_arr: np.ndarray, image_format: str = 'gray') -> Iterator[np.ndarray]:
     """
     Return generator with resized image rgb format
+        
+    Parameters
+    ------------------------
+    img_arr: np.ndarray
+    image_format: {'gray', 'bgr', 'rgb'},  default ='gray'
     """
+    image_formats = {'rbg': cv2.COLOR_GRAY2RGB, 'bgr': cv2.COLOR_GRAY2BGR, 'gray': cv2.IMREAD_GRAYSCALE}
+
     for i in range(img_arr.shape[0]):
-        cv_image = cv2.cvtColor(img_arr[i], cv2.COLOR_GRAY2RGB)
+        cv_image = cv2.cvtColor(img_arr[i], image_formats[image_format])
         resized_img = cv2.resize(cv_image, SIZEIMAGE)
         yield resized_img
 
 
-def save_images(dataset: pd.DataFrame, directory: str) -> None:
+def save_images(dataset: pd.DataFrame, directory: str, image_format: str = 'gray') -> None:
     """
     Save images png format in directory
     Path and file name: {directory}/{dataset[" Usage"].lower()}/{index file in dataset}_{emotion}.png
+
+    Parameters
+    ------------------------
+    dataset: pd.Dataframe
+    directory: str
+    image_format: {'gray', 'bgr', 'rgb'},  default ='gray'
     """
     if "/" not in directory:
         directory += "/"
@@ -44,7 +57,7 @@ def save_images(dataset: pd.DataFrame, directory: str) -> None:
     filenames: list[str] = [directory + dataset[" Usage"][0].lower() + "/"
                             + str(i) + "_" + str(dataset.iloc[i, 0]) + ".png"
                             for i in range(dataset.shape[0])]
-    for item, image in zip(range(dataset.shape[0]), resize_images(img_arr)):
+    for item, image in zip(range(dataset.shape[0]), resize_images(img_arr, image_format)):
         cv2.imwrite(filenames[item], image)
 
 
