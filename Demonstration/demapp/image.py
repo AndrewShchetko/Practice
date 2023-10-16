@@ -10,9 +10,16 @@ train_dataset = pd.read_csv("train.csv")
 test_dataset = pd.read_csv("test.csv")
 
 
+<<<<<<< HEAD
 def get_img_dataset(dataset: pd.DataFrame) -> np.ndarray:
     """
     Get image from string format
+=======
+def get_pixel_array(dataset: pd.DataFrame) -> np.ndarray:
+    """
+    Get image from string format in dataset.
+    Another shit function.
+>>>>>>> 7300f32 (fix(image)!: rename get_img_dataset to get_pixel_array)
     """
     image_df: pd.DataFrame = dataset[' pixels'].copy()
     for i in range(len(image_df)):
