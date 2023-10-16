@@ -10,16 +10,9 @@ train_dataset = pd.read_csv("train.csv")
 test_dataset = pd.read_csv("test.csv")
 
 
-<<<<<<< HEAD
-def get_img_dataset(dataset: pd.DataFrame) -> np.ndarray:
-    """
-    Get image from string format
-=======
 def get_pixel_array(dataset: pd.DataFrame) -> np.ndarray:
     """
     Get image from string format in dataset.
-    Another shit function.
->>>>>>> 7300f32 (fix(image)!: rename get_img_dataset to get_pixel_array)
     """
     image_df: pd.DataFrame = dataset[' pixels'].copy()
     for i in range(len(image_df)):
@@ -55,21 +48,7 @@ def save_images(dataset: pd.DataFrame, directory: str) -> None:
         cv2.imwrite(filenames[item], image)
 
 
-<<<<<<< HEAD
-save_images(get_img_dataset(train_dataset), train_dataset)
-
-
-def get_img_dir_generator(directory: str) -> Iterator[tuple[int, pd.DataFrame]]:
-    """
-    Read images from directory and return emotion and image.
-    """
-    p = Path(directory)
-    for file in p.iterdir():
-        image = cv2.imread(str(file))
-        emotion = int(file.name.split(".")[0].split("_")[1])
-        yield emotion, np.asarray(image)
-=======
-def read_images_from_dir(directory: str) -> Iterator[tuple[str,int, pd.DataFrame]]:
+def read_images_from_dir(directory: str) -> Iterator[tuple[str, int, pd.DataFrame]]:
     """
     Read images from directory and return type of dataset(subdirectory name), emotion and image.
     """
@@ -81,4 +60,3 @@ def read_images_from_dir(directory: str) -> Iterator[tuple[str,int, pd.DataFrame
 
 
 save_images(pd.concat([train_dataset, test_dataset], ignore_index=True), "data")
->>>>>>> b5c0546 (fix(image)!: rewrite function get_img_dir_generator)
