@@ -4,8 +4,6 @@ import pandas as pd
 import numpy as np
 import cv2
 
-SIZEIMAGE: tuple[int, int] = (224, 224)
-
 train_dataset = pd.read_csv("train.csv")
 test_dataset = pd.read_csv("test.csv")
 
@@ -21,24 +19,27 @@ def get_pixel_array(dataset: pd.DataFrame) -> np.ndarray:
     return np.stack(image_df.to_numpy())
 
 
-def resize_images(images_array: np.ndarray, image_format: str = 'gray') -> Iterator[np.ndarray]:
+def resize_images(images_array: np.ndarray, new_image_size: tuple[int, int] = (224, 224), image_format: str = 'gray') \
+        -> Iterator[np.ndarray]:
     """
     Return generator with resized image rgb format
         
     Parameters
     ------------------------
     images_array: np.ndarray
+    new_image_size: tuple[int, int], default = (224, 224),
     image_format: {'gray', 'bgr', 'rgb'},  default ='gray'
     """
     image_formats = {'rbg': cv2.COLOR_GRAY2RGB, 'bgr': cv2.COLOR_GRAY2BGR, 'gray': cv2.IMREAD_GRAYSCALE}
 
     for i in range(images_array.shape[0]):
         cv_image = cv2.cvtColor(images_array[i], image_formats[image_format])
-        resized_img = cv2.resize(cv_image, SIZEIMAGE)
+        resized_img = cv2.resize(cv_image, new_image_size)
         yield resized_img
 
 
-def save_images(dataset: pd.DataFrame, directory: str, image_format: str = 'gray') -> None:
+def save_images(dataset: pd.DataFrame, directory: str, new_image_size: tuple[int, int] = (224, 224),
+                image_format: str = 'gray') -> None:
     """
     Save images png format in directory
     Path and file name: {directory}/{dataset[" Usage"].lower()}/{index file in dataset}_{emotion}.png
@@ -47,7 +48,8 @@ def save_images(dataset: pd.DataFrame, directory: str, image_format: str = 'gray
     ------------------------
     dataset: pd.Dataframe
     directory: str
-    image_format: {'gray', 'bgr', 'rgb'},  default ='gray'
+    new_image_size: tuple[int, int], default = (224, 224)
+    image_format: {'gray', 'bgr', 'rgb'},  default = 'gray'
     """
     if "/" not in directory:
         directory += "/"
@@ -57,7 +59,7 @@ def save_images(dataset: pd.DataFrame, directory: str, image_format: str = 'gray
     filenames: list[str] = [directory + dataset[" Usage"][0].lower() + "/"
                             + str(i) + "_" + str(dataset.iloc[i, 0]) + ".png"
                             for i in range(dataset.shape[0])]
-    for item, image in zip(range(dataset.shape[0]), resize_images(img_arr, image_format)):
+    for item, image in zip(range(dataset.shape[0]), resize_images(img_arr, new_image_size, image_format)):
         cv2.imwrite(filenames[item], image)
 
 
