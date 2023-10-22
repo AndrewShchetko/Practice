@@ -42,7 +42,7 @@ def save_images(dataset: pd.DataFrame, directory: str, new_image_size: tuple[int
                 image_format: str = 'gray') -> None:
     """
     Save images png format in directory
-    Path and file name: {directory}/{dataset[" Usage"].lower()}/{index file in dataset}_{emotion}.png
+    Path and file name: {directory}/{train|test}/{index file in dataset}_{emotion}.png
 
     Parameters
     ------------------------
@@ -54,13 +54,16 @@ def save_images(dataset: pd.DataFrame, directory: str, new_image_size: tuple[int
     if "/" not in directory:
         directory += "/"
     img_arr = get_pixel_array(dataset)
-    Path(directory + dataset[" Usage"][0].lower() + "/").mkdir(parents=True, exist_ok=True)
 
-    filenames: list[str] = [directory + dataset[" Usage"][0].lower() + "/"
-                            + str(i) + "_" + str(dataset.iloc[i, 0]) + ".png"
-                            for i in range(dataset.shape[0])]
+    dataset[" Usage"] = dataset[" Usage"].apply(lambda x: "train" if "train" in x.lower() else "test")
+
+    filepath: list[str] = [directory + dataset[" Usage"][0].lower() + "/"
+                           + str(i) + "_" + str(dataset.iloc[i, 0]) + ".png"
+                           for i in range(dataset.shape[0])]
+
     for item, image in zip(range(dataset.shape[0]), resize_images(img_arr, new_image_size, image_format)):
-        cv2.imwrite(filenames[item], image)
+        Path(filepath[item]).mkdir(parents=True, exist_ok=True)
+        cv2.imwrite(filepath[item], image)
 
 
 def read_images_from_dir(directory: str) -> Iterator[tuple[str, int, pd.DataFrame]]:
