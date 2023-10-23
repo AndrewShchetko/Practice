@@ -57,12 +57,14 @@ def save_images(dataset: pd.DataFrame, directory: str, new_image_size: tuple[int
 
     dataset[" Usage"] = dataset[" Usage"].apply(lambda x: "train" if "train" in x.lower() else "test")
 
-    filepath: list[str] = [directory + dataset[" Usage"][0].lower() + "/"
+    for i in dataset[" Usage"].unique():
+        Path(directory+i).mkdir(parents=True, exist_ok=True)
+
+    filepath: list[str] = [directory + dataset[" Usage"][i] + "/"
                            + str(i) + "_" + str(dataset.iloc[i, 0]) + ".png"
                            for i in range(dataset.shape[0])]
 
     for item, image in zip(range(dataset.shape[0]), resize_images(img_arr, new_image_size, image_format)):
-        Path(filepath[item]).mkdir(parents=True, exist_ok=True)
         cv2.imwrite(filepath[item], image)
 
 
