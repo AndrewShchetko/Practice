@@ -68,15 +68,16 @@ def save_images(dataset: pd.DataFrame, directory: str, new_image_size: tuple[int
         cv2.imwrite(filepath[item], image)
 
 
-def read_images_from_dir(directory: str) -> Iterator[tuple[str, int, pd.DataFrame]]:
+def read_images_from_dir(directory: str) -> Iterator[tuple[int, np.ndarray]]:
     """
-    Read images from directory and return type of dataset(subdirectory name), emotion and image.
+    Read images from directory and return emotion and image.
     """
     p = Path(directory)
     for path in p.rglob("*.png"):
         image = cv2.imread(str(path))
         emotion = int(path.name.split(".")[0].split("_")[1])
-        yield str(path.parent).lstrip(directory + "/"), emotion, np.asarray(image)
+        yield emotion,  np.asarray(image)
 
 
 save_images(pd.concat([train_dataset, test_dataset], ignore_index=True), "data")
+print([i for i in read_images_from_dir("data")])
