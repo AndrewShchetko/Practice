@@ -73,7 +73,7 @@ def read_images_from_dir(directory: str) -> Iterator[tuple[str, int, pd.DataFram
     Read images from directory and return type of dataset(subdirectory name), emotion and image.
     """
     p = Path(directory)
-    for path in p.glob("*/*.png"):
+    for path in p.rglob("*.png"):
         image = cv2.imread(str(path))
         emotion = int(path.name.split(".")[0].split("_")[1])
         yield str(path.parent).lstrip(directory + "/"), emotion, np.asarray(image)
