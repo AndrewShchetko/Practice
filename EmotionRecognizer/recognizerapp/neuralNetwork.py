@@ -5,11 +5,11 @@ from keras.applications.vgg19 import VGG19, preprocess_input
 from keras.layers import Dense, GlobalAveragePooling2D
 from keras.models import Model
 from keras.optimizers import Adam
-from image import
+from image import read_images_from_dir
 
 
 def make_image_array(images: list, emotions: list, directory: str):
-    for emotion, img in (directory):
+    for emotion, img in read_images_from_dir(directory):
         emotions.append(emotion)
         images.append(img)
     images: NDArray = np.array(images)
@@ -45,5 +45,3 @@ model.compile(
 
 his = model.fit(img_train, emotions_train_categorical, batch_size=32, epochs=10, validation_split=0.2)
 model.save('model')
-# model_loaded = keras.models.load_model('model')
-# model.evaluate(img_test, emotions_test_categorical)

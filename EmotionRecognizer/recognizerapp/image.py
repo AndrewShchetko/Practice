@@ -76,8 +76,7 @@ def read_images_from_dir(directory: str) -> Iterator[tuple[int, np.ndarray]]:
     for path in p.rglob("*.png"):
         image = cv2.imread(str(path))
         emotion = int(path.name.split(".")[0].split("_")[1])
-        yield emotion,  np.asarray(image)
+        yield emotion, np.asarray(image)
 
 
 save_images(pd.concat([train_dataset, test_dataset], ignore_index=True), "data")
-print([i for i in read_images_from_dir("data")])

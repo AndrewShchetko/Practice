@@ -19,7 +19,7 @@ class PasswordException(Exception):
 
 class RegisterUser(CreateView):
     form_class = RegisterUserForm
-    template_name = 'demapp/register.html'
+    template_name = 'recognizerapp/register.html'
     success_url = reverse_lazy('home')
 
     def get_context_data(self, **kwargs):
@@ -34,7 +34,7 @@ class RegisterUser(CreateView):
 
 class LoginUser(LoginView):
     form_class = LoginUserForm
-    template_name = 'demapp/login.html'
+    template_name = 'recognizerapp/login.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -63,7 +63,7 @@ def change_password(request):
     else:
         form = ChangePasswordForm()
     context = {'form': form, 'user': user}
-    return render(request, 'demapp/settings.html', context=context)
+    return render(request, 'recognizerapp/settings.html', context=context)
 
 
 def use_nn(request):
@@ -91,7 +91,7 @@ def use_nn(request):
             data = []
             data.append(arr)
             data = np.expand_dims(data, axis=3)
-            model_loaded = keras.saving.load_model("./demapp/model")
+            model_loaded = keras.saving.load_model("./recognizerapp/model")
             predicted = model_loaded.predict(data).tolist()
             maxi = predicted.index(max(predicted))
             emotion = emotions[maxi]
@@ -104,4 +104,4 @@ def use_nn(request):
     else:
         form = NeuralNetworkForm()
     context['form'] = form
-    return render(request, 'demapp/NNform.html', context=context)
+    return render(request, 'recognizerapp/NNform.html', context=context)
