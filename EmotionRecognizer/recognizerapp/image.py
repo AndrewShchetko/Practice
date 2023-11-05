@@ -30,7 +30,7 @@ def resize_images(images_array: np.ndarray, new_image_size: tuple[int, int] = (2
     new_image_size: tuple[int, int], default = (224, 224),
     image_format: {'gray', 'bgr', 'rgb'},  default ='gray'
     """
-    image_formats = {'rbg': cv2.COLOR_GRAY2RGB, 'bgr': cv2.COLOR_GRAY2BGR, 'gray': cv2.IMREAD_GRAYSCALE}
+    image_formats = {'rgb': cv2.COLOR_GRAY2RGB, 'bgr': cv2.COLOR_GRAY2BGR, 'gray': cv2.IMREAD_GRAYSCALE}
 
     for i in range(images_array.shape[0]):
         cv_image = cv2.cvtColor(images_array[i], image_formats[image_format])
