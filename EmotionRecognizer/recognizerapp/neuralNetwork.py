@@ -17,13 +17,20 @@ def make_image_array(images: list, emotions: list, directory: str):
     return images, emotions
 
 
+def custom_preprocess_input(images: NDArray):
+    for i in range(len(images)):
+        images[i] = preprocess_input(images[i])
+    return images
+
+
 img_train, emotions_train_categorical = make_image_array([], [], 'data/train/')
 print(img_train.shape)
 img_test, emotions_test_categorical = make_image_array([], [], 'data/test/')
 print(img_test.shape)
 print('data parsed correctly')
-img_train = preprocess_input(img_train)
-img_test = preprocess_input(img_test)
+img_train = custom_preprocess_input(img_train)
+img_test = custom_preprocess_input(img_test)
+print('end of preprocess input')
 
 base_model = VGG19(weights='imagenet', include_top=False)
 

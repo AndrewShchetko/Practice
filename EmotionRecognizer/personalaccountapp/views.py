@@ -13,7 +13,7 @@ class PasswordException(Exception):
 
 class RegisterUser(CreateView):
     form_class = RegisterUserForm
-    template_name = 'recognizerapp/register.html'
+    template_name = 'personalaccountapp/register.html'
     success_url = reverse_lazy('home')
 
     def get_context_data(self, **kwargs):
@@ -28,7 +28,7 @@ class RegisterUser(CreateView):
 
 class LoginUser(LoginView):
     form_class = LoginUserForm
-    template_name = 'recognizerapp/login.html'
+    template_name = 'personalaccountapp/login.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -57,5 +57,5 @@ def change_password(request):
     else:
         form = ChangePasswordForm()
     context = {'form': form, 'user': user}
-    return render(request, 'recognizerapp/settings.html', context=context)
+    return render(request, 'personalaccountapp/settings.html', context=context)
 
