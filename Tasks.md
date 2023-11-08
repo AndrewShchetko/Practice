@@ -1,5 +1,5 @@
 ## [AlbaLilium](https://github.com/AlbaLilium)
-- [ ] Add work with image   
+- [x] Add work with image   
 - [ ] Add normal interface
 - [ ] (Optional) Make metrics for NN
 ## [AndrewShchetko](https://github.com/AndrewShchetko)
