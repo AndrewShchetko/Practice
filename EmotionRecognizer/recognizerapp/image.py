@@ -4,8 +4,8 @@ import pandas as pd
 import numpy as np
 import cv2
 
-train_dataset = pd.read_csv("train.csv")
-test_dataset = pd.read_csv("test.csv")
+# train_dataset = pd.read_csv("train.csv")
+# test_dataset = pd.read_csv("test.csv")
 
 
 def get_pixel_array(dataset: pd.DataFrame) -> np.ndarray:
@@ -79,4 +79,4 @@ def read_images_from_dir(directory: str) -> Iterator[tuple[int, np.ndarray]]:
         yield emotion, np.asarray(image)
 
 
-save_images(pd.concat([train_dataset, test_dataset], ignore_index=True), "data")
+# save_images(pd.concat([train_dataset, test_dataset], ignore_index=True), "data")

@@ -58,4 +58,3 @@ def change_password(request):
         form = ChangePasswordForm()
     context = {'form': form, 'user': user}
     return render(request, 'personalaccountapp/settings.html', context=context)
-
