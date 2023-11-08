@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from ..recognizerapp.models import Images
+from recognizerapp.models import Images
 
 
 class Results(models.Model):
