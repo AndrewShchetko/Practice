@@ -1,14 +1,21 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import login
+from django.contrib.auth import login, authenticate
 from django.contrib.auth.views import LoginView
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView
-from .forms import *
+from rest_framework.generics import CreateAPIView
+from rest_framework.permissions import AllowAny
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+from .serializers import RegisterUserSerializer, User
+from .forms import RegisterUserForm, LoginUserForm, ChangePasswordForm
 
 
 class PasswordException(Exception):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, message):
+        self.message = message
+        super().__init__(self.message)
 
 
 class RegisterUser(CreateView):
@@ -26,6 +33,16 @@ class RegisterUser(CreateView):
         return redirect('home')
 
 
+class RegisterUserAPIView(CreateAPIView):
+    serializer_class = RegisterUserSerializer
+    permission_classes = [AllowAny]
+
+    def form_valid(self, form):
+        user = form.save()
+        login(self.request, user)
+        return redirect('home')
+
+
 class LoginUser(LoginView):
     form_class = LoginUserForm
     template_name = 'personalaccountapp/login.html'
@@ -36,6 +53,25 @@ class LoginUser(LoginView):
 
     def get_success_url(self):
         return reverse_lazy('home')
+
+
+class LoginUserAPIView(APIView):
+    def post(self, request, *args, **kwargs):
+        form = LoginUserForm(request.POST)
+
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+
+            user = authenticate(request, username=username, password=password)
+
+            if user is not None:
+                login(request, user)
+                return Response({'detail': 'Login successful'}, status=status.HTTP_200_OK)
+            else:
+                return Response({'detail': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
+        else:
+            return Response({'detail': 'Invalid form data'}, status=status.HTTP_400_BAD_REQUEST)
 
 
 def change_password(request):
@@ -58,3 +94,27 @@ def change_password(request):
         form = ChangePasswordForm()
     context = {'form': form, 'user': user}
     return render(request, 'personalaccountapp/settings.html', context=context)
+
+
+class ChangePasswordAPIView(APIView):
+    def post(self, request, *args, **kwargs):
+        form = ChangePasswordForm(request.data)
+
+        if form.is_valid():
+            cleaned = form.cleaned_data
+            user = User.objects.get(username=cleaned['username'])
+
+            try:
+                if user.check_password(cleaned["old_password"]):
+                    if cleaned["old_password"] != cleaned["new_password"]:
+                        user.set_password(cleaned["new_password"])
+                        user.save()
+                        return Response({'detail': 'Password changed successfully'}, status=status.HTTP_200_OK)
+                    else:
+                        raise PasswordException('Choose another password')
+                else:
+                    raise PasswordException('Invalid old password')
+            except PasswordException as e:
+                return Response({'detail': str(e)}, status=status.HTTP_400_BAD_REQUEST)
+        else:
+            return Response({'detail': 'Invalid form data'}, status=status.HTTP_400_BAD_REQUEST)

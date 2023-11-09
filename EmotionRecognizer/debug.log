@@ -719,3 +719,33 @@ django.template.exceptions.TemplateDoesNotExist: personalaccountapp/settings.htm
 2023-11-08 14:33:52,364 h5py._conv   DEBUG    Creating converter from 5 to 7
 2023-11-08 14:33:52,364 h5py._conv   DEBUG    Creating converter from 7 to 5
 2023-11-08 14:33:52,364 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-09 15:37:15,288 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-11-09 15:37:16,782 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-09 15:37:16,783 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-09 15:37:16,783 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-09 15:37:16,784 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-09 15:42:24,419 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-11-09 15:42:24,501 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-09 15:42:24,501 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-09 15:42:24,501 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-09 15:42:24,501 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-09 15:42:45,996 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-11-09 15:42:46,074 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-09 15:42:46,074 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-09 15:42:46,074 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-09 15:42:46,074 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-09 15:43:52,831 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-11-09 15:43:52,909 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-09 15:43:52,909 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-09 15:43:52,909 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-09 15:43:52,909 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-09 15:49:15,400 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-11-09 15:49:15,480 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-09 15:49:15,480 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-09 15:49:15,480 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-09 15:49:15,480 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-09 15:49:33,163 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-11-09 15:49:33,241 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-09 15:49:33,241 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-09 15:49:33,241 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-09 15:49:33,241 h5py._conv   DEBUG    Creating converter from 5 to 7

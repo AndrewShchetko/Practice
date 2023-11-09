@@ -1,5 +1,7 @@
 from PIL import Image
 import numpy as np
+from rest_framework.viewsets import ReadOnlyModelViewSet
+from rest_framework.generics import CreateAPIView
 from tensorflow import keras
 from django.shortcuts import render
 from .forms import *
@@ -7,7 +9,6 @@ from .image import resize_images
 from personalaccountapp.models import Results
 from personalaccountapp.serializers import ResultsSerializer
 from .serializers import ImagesSerializer
-from rest_framework.generics import CreateAPIView
 
 emotions = ['Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral']
 
@@ -53,4 +54,13 @@ class ResultsCreateView(CreateAPIView):
         image_serializer = ImagesSerializer(data=image_data)
         if image_serializer.is_valid():
             image = image_serializer.save()
-            serializer.save(image=image)
+            serializer.save(image=image)   # Создает объекты моделей Images и Results в соответствии с моделями
+
+
+class ResultsModelViewSet(ReadOnlyModelViewSet):
+    serializer_class = ResultsSerializer
+
+    def get_queryset(self):
+        user = self.request.user
+        queryset = Results.objects.filter(user=user)
+        return queryset    # Отдает все результаты конкретного пользователя
