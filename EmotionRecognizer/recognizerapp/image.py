@@ -31,21 +31,14 @@ def resize_images(images_array: np.ndarray, new_image_size: tuple = (224, 224), 
     new_image_size: tuple[int, int], default = (224, 224),
     image_format: {'gray', 'bgr', 'rgb'},  default ='gray'
     """
-    image_formats = {'rgb': cv2.COLOR_GRAY2RGB, 'bgr': cv2.COLOR_GRAY2BGR, 'gray': cv2.IMREAD_GRAYSCALE,
-                     "default": cv2.IMREAD_UNCHANGED}
+    image_formats = {'rgb': cv2.COLOR_GRAY2RGB, 'bgr': cv2.COLOR_GRAY2BGR, 'gray': cv2.IMREAD_GRAYSCALE}
 
     for i in range(images_array.shape[0]):
         cv_image = cv2.cvtColor(images_array[i], image_formats[image_format])
         resized_img = cv2.resize(cv_image, new_image_size)
+        if image_format == 'gray':
+            resized_img = cv2.cvtColor(resized_img, cv2.COLOR_BGR2GRAY)
         yield resized_img
-
-
-# img = Image.open("data/train/0_0.png").convert('L')
-# img_arr = np.asarray(img)
-# data: np.ndarray
-# for image in resize_images(img_arr, image_format='default'):
-#     data = image
-# data.shape
 
 
 def save_images(dataset: pd.DataFrame, directory: str, new_image_size: tuple[int, int] = (224, 224),
