@@ -1,6 +1,5 @@
 from PIL import Image
 import numpy as np
-from rest_framework.viewsets import ReadOnlyModelViewSet
 from rest_framework.generics import CreateAPIView
 from tensorflow import keras
 from django.shortcuts import render
@@ -55,12 +54,3 @@ class ResultsCreateView(CreateAPIView):
         if image_serializer.is_valid():
             image = image_serializer.save()
             serializer.save(image=image)   # Создает объекты моделей Images и Results в соответствии с моделями
-
-
-class ResultsModelViewSet(ReadOnlyModelViewSet):
-    serializer_class = ResultsSerializer
-
-    def get_queryset(self):
-        user = self.request.user
-        queryset = Results.objects.filter(user=user)
-        return queryset    # Отдает все результаты конкретного пользователя

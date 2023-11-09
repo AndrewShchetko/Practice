@@ -4,12 +4,14 @@ from django.contrib.auth.views import LoginView
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView
 from rest_framework.generics import CreateAPIView
+from rest_framework.viewsets import ReadOnlyModelViewSet
 from rest_framework.permissions import AllowAny
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .serializers import RegisterUserSerializer, User
+from .serializers import RegisterUserSerializer, ResultsSerializer
 from .forms import RegisterUserForm, LoginUserForm, ChangePasswordForm
+from .models import Results, User
 
 
 class PasswordException(Exception):
@@ -87,7 +89,7 @@ def change_password(request):
                         user.set_password(cleaned["new_password"])
                         user.save()
                     else:
-                        raise PasswordException()
+                        raise PasswordException('Error')
             except PasswordException:
                 form.add_error('new_password', 'Choose another password')
     else:
@@ -118,3 +120,12 @@ class ChangePasswordAPIView(APIView):
                 return Response({'detail': str(e)}, status=status.HTTP_400_BAD_REQUEST)
         else:
             return Response({'detail': 'Invalid form data'}, status=status.HTTP_400_BAD_REQUEST)
+
+
+class ResultsModelViewSet(ReadOnlyModelViewSet):
+    serializer_class = ResultsSerializer
+
+    def get_queryset(self):
+        user = self.request.user
+        queryset = Results.objects.filter(user=user)
+        return queryset    # Отдает все результаты конкретного пользователя
