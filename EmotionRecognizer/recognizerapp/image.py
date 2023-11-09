@@ -5,8 +5,8 @@ import numpy as np
 import cv2
 from PIL import Image
 
-# train_dataset = pd.read_csv("train.csv")
-# test_dataset = pd.read_csv("test.csv")
+train_dataset = pd.read_csv("train.csv")
+test_dataset = pd.read_csv("test.csv")
 
 
 def get_pixel_array(dataset: pd.DataFrame) -> np.ndarray:
@@ -77,7 +77,7 @@ def read_images_from_dir(directory: str) -> Iterator[tuple[int, np.ndarray]]:
     """
     p = Path(directory)
     for path in p.rglob("*.png"):
-        image = cv2.imread(str(path))
+        image = cv2.imread(str(path), cv2.COLOR_BGR2GRAY)
         emotion = int(path.name.split(".")[0].split("_")[1])
         yield emotion, np.asarray(image)
 
