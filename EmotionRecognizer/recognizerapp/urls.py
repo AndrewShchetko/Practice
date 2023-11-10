@@ -1,8 +1,8 @@
 from django.urls import path, include
-from .views import ResultsCreateView, use_nn
+from .views import UseNNAPIView, use_nn
 
 
 urlpatterns = [
     path('home/', use_nn, name="home"),
-    path('api/result/', ResultsCreateView.as_view(), name="result-create"),
+    path('api/result/', UseNNAPIView.as_view(), name="result-create"),
 ]
