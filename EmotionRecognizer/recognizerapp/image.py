@@ -5,8 +5,8 @@ import numpy as np
 import cv2
 from PIL import Image
 
-train_dataset = pd.read_csv("train.csv")
-test_dataset = pd.read_csv("test.csv")
+# train_dataset = pd.read_csv("train.csv")
+# test_dataset = pd.read_csv("test.csv")
 
 
 def get_pixel_array(dataset: pd.DataFrame) -> np.ndarray:
