@@ -1,8 +1,7 @@
-{% extends 'demapp/base.html' %}
+{% extends 'recognizerapp/base.html' %}
 
 {% block content %}
-<div style="display: flex; flex-direction: column; align-items: center;">
-<h1>Add task</h1>
+<h1>Register</h1>
 
 <form method="post">
     {% csrf_token %}
@@ -11,7 +10,6 @@
     <div class="form-error">{{ f.errors }}</div>
     {% endfor %}
 
-    <button type="submit">Change</button>
+    <button type="submit">Register</button>
 </form>
-    </div>
 {% endblock %}

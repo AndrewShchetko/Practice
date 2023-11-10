@@ -3,9 +3,10 @@ from pathlib import Path
 import pandas as pd
 import numpy as np
 import cv2
+from PIL import Image
 
-train_dataset = pd.read_csv("train.csv")
-test_dataset = pd.read_csv("test.csv")
+# train_dataset = pd.read_csv("train.csv")
+# test_dataset = pd.read_csv("test.csv")
 
 
 def get_pixel_array(dataset: pd.DataFrame) -> np.ndarray:
@@ -19,22 +20,24 @@ def get_pixel_array(dataset: pd.DataFrame) -> np.ndarray:
     return np.stack(image_df.to_numpy())
 
 
-def resize_images(images_array: np.ndarray, new_image_size: tuple[int, int] = (224, 224), image_format: str = 'gray') \
+def resize_images(images_array: np.ndarray, new_image_size: tuple = (224, 224), image_format: str = 'gray') \
         -> Iterator[np.ndarray]:
     """
     Return generator with resized image rgb format
-        
+
     Parameters
     ------------------------
     images_array: np.ndarray
     new_image_size: tuple[int, int], default = (224, 224),
     image_format: {'gray', 'bgr', 'rgb'},  default ='gray'
     """
-    image_formats = {'rbg': cv2.COLOR_GRAY2RGB, 'bgr': cv2.COLOR_GRAY2BGR, 'gray': cv2.IMREAD_GRAYSCALE}
+    image_formats = {'rgb': cv2.COLOR_GRAY2RGB, 'bgr': cv2.COLOR_GRAY2BGR, 'gray': cv2.IMREAD_GRAYSCALE}
 
     for i in range(images_array.shape[0]):
         cv_image = cv2.cvtColor(images_array[i], image_formats[image_format])
         resized_img = cv2.resize(cv_image, new_image_size)
+        if image_format == 'gray':
+            resized_img = cv2.cvtColor(resized_img, cv2.COLOR_BGR2GRAY)
         yield resized_img
 
 
@@ -74,9 +77,9 @@ def read_images_from_dir(directory: str) -> Iterator[tuple[int, np.ndarray]]:
     """
     p = Path(directory)
     for path in p.rglob("*.png"):
-        image = cv2.imread(str(path))
+        image = cv2.imread(str(path), cv2.COLOR_BGR2GRAY)
         emotion = int(path.name.split(".")[0].split("_")[1])
         yield emotion, np.asarray(image)
 
 
-save_images(pd.concat([train_dataset, test_dataset], ignore_index=True), "data")
+# save_images(pd.concat([train_dataset, test_dataset], ignore_index=True), "data")

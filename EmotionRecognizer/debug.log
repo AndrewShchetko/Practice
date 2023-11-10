@@ -586,3 +586,287 @@ OSError: No file or directory found at /model
 2023-09-30 09:42:17,912 PIL.Image    DEBUG    Importing XVThumbImagePlugin
 2023-09-30 09:42:17,913 PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
 2023-09-30 09:42:17,913 PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 41 1310
+2023-11-05 15:42:07,727 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-05 15:56:25,270 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-08 14:25:15,446 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-11-08 14:25:16,969 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-08 14:25:16,970 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-08 14:25:16,970 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-08 14:25:16,970 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-08 14:25:26,240 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-11-08 14:25:26,344 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-08 14:25:26,344 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-08 14:25:26,344 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-08 14:25:26,344 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-08 14:28:49,577 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-11-08 14:28:49,685 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-08 14:28:49,685 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-08 14:28:49,685 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-08 14:28:49,686 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-08 14:29:00,303 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-11-08 14:29:00,409 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-08 14:29:00,409 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-08 14:29:00,409 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-08 14:29:00,410 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-08 14:29:50,538 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-11-08 14:29:50,643 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-08 14:29:50,643 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-08 14:29:50,643 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-08 14:29:50,643 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-08 14:29:59,637 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-11-08 14:29:59,743 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-08 14:29:59,743 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-08 14:29:59,743 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-08 14:29:59,743 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-08 14:30:35,054 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-08 14:30:36,014 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-11-08 14:30:36,121 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-08 14:30:36,121 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-08 14:30:36,121 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-08 14:30:36,122 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-08 14:30:54,788 django.request WARNING  Not Found: /
+2023-11-08 14:30:56,660 django.request WARNING  Not Found: /favicon.ico
+2023-11-08 14:31:08,094 django.request ERROR    Internal Server Error: /home/
+Traceback (most recent call last):
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/Practice/EmotionRecognizer/recognizerapp/views.py", line 41, in use_nn
+    return render(request, 'recognizerapp/NNform.html', context=context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'user_settings' not found. 'user_settings' is not a valid view function or pattern name.
+2023-11-08 14:32:47,078 django.utils.autoreload INFO     /home/android/Practice/EmotionRecognizer/EmotionRecognizer/urls.py changed, reloading.
+2023-11-08 14:32:47,632 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-08 14:32:48,608 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-11-08 14:32:48,730 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-08 14:32:48,730 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-08 14:32:48,730 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-08 14:32:48,730 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-08 14:32:56,761 django.request ERROR    Internal Server Error: /account/settings/
+Traceback (most recent call last):
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/Practice/EmotionRecognizer/personalaccountapp/views.py", line 60, in change_password
+    return render(request, 'personalaccountapp/settings.html', context=context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: personalaccountapp/settings.html
+2023-11-08 14:33:50,723 django.utils.autoreload INFO     /home/android/Practice/EmotionRecognizer/personalaccountapp/views.py changed, reloading.
+2023-11-08 14:33:51,256 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-08 14:33:52,257 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-11-08 14:33:52,364 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-08 14:33:52,364 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-08 14:33:52,364 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-08 14:33:52,364 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-09 15:37:15,288 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-11-09 15:37:16,782 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-09 15:37:16,783 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-09 15:37:16,783 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-09 15:37:16,784 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-09 15:42:24,419 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-11-09 15:42:24,501 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-09 15:42:24,501 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-09 15:42:24,501 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-09 15:42:24,501 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-09 15:42:45,996 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-11-09 15:42:46,074 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-09 15:42:46,074 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-09 15:42:46,074 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-09 15:42:46,074 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-09 15:43:52,831 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-11-09 15:43:52,909 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-09 15:43:52,909 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-09 15:43:52,909 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-09 15:43:52,909 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-09 15:49:15,400 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-11-09 15:49:15,480 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-09 15:49:15,480 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-09 15:49:15,480 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-09 15:49:15,480 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-09 15:49:33,163 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-11-09 15:49:33,241 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-09 15:49:33,241 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-09 15:49:33,241 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-09 15:49:33,241 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-10 09:54:37,794 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-10 09:54:59,521 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-11-10 09:55:00,818 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-10 09:55:00,818 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-10 09:55:00,818 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-10 09:55:00,818 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-10 09:58:25,932 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-10 09:58:26,990 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-11-10 09:58:27,069 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-10 09:58:27,069 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-10 09:58:27,069 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-10 09:58:27,069 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-10 09:58:47,386 django.request WARNING  Not Found: /
+2023-11-10 09:59:31,335 django.request WARNING  Not Found: /api/list
+2023-11-10 10:01:02,718 django.request ERROR    Internal Server Error: /account/api/list/
+Traceback (most recent call last):
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2053, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/contrib/auth/models.py", line 437, in __int__
+    raise TypeError(
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "/home/android/Practice/EmotionRecognizer/personalaccountapp/views.py", line 130, in get_queryset
+    queryset = Results.objects.filter(user=user)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1491, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1318, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/db/models/fields/related_lookups.py", line 166, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/android/.local/share/virtualenvs/Practice-WoFJWGfu/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2055, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x7f0f1f4361d0>.
+2023-11-10 10:06:42,077 django.utils.autoreload INFO     /home/android/Practice/EmotionRecognizer/personalaccountapp/urls.py changed, reloading.
+2023-11-10 10:08:19,045 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-10 10:08:20,058 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-11-10 10:08:20,139 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-10 10:08:20,139 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-10 10:08:20,139 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-10 10:08:20,139 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-10 10:09:47,972 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-10 10:09:48,960 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-11-10 10:09:49,037 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-10 10:09:49,037 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-10 10:09:49,037 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-10 10:09:49,037 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-10 10:10:04,236 django.utils.autoreload INFO     /home/android/Practice/EmotionRecognizer/personalaccountapp/urls.py changed, reloading.
+2023-11-10 10:10:04,951 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-10 10:10:06,015 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-11-10 10:10:06,105 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-10 10:10:06,106 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-10 10:10:06,106 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-10 10:10:06,106 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-10 10:10:36,215 django.utils.autoreload INFO     /home/android/Practice/EmotionRecognizer/personalaccountapp/urls.py changed, reloading.
+2023-11-10 10:10:36,727 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-10 10:10:37,777 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-11-10 10:10:37,856 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-10 10:10:37,856 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-10 10:10:37,857 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-10 10:10:37,857 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-10 10:10:53,167 MARKDOWN     DEBUG    Successfully imported extension module "markdown.extensions.toc".
+2023-11-10 10:10:53,168 MARKDOWN     DEBUG    Successfully loaded extension "markdown.extensions.toc.TocExtension".
+2023-11-10 10:10:53,275 django.request WARNING  Method Not Allowed: /account/api/login
+2023-11-10 10:11:24,962 MARKDOWN     DEBUG    Successfully imported extension module "markdown.extensions.toc".
+2023-11-10 10:11:24,963 MARKDOWN     DEBUG    Successfully loaded extension "markdown.extensions.toc.TocExtension".
+2023-11-10 10:11:25,015 django.request WARNING  Method Not Allowed: /account/api/register
+2023-11-10 10:11:35,420 MARKDOWN     DEBUG    Successfully imported extension module "markdown.extensions.toc".
+2023-11-10 10:11:35,420 MARKDOWN     DEBUG    Successfully loaded extension "markdown.extensions.toc.TocExtension".
+2023-11-10 10:11:35,423 django.request WARNING  Method Not Allowed: /account/api/change-password

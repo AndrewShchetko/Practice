@@ -1,10 +1,8 @@
 from django.urls import path
-from .views import *
+from .views import UseNNAPIView, use_nn
 
 
 urlpatterns = [
-    path('', LoginUser.as_view(), name='login'),
-    path('register/', RegisterUser.as_view(), name='register'),
-    path('settings/', change_password, name='user_settings'),
     path('home/', use_nn, name="home"),
+    path('api/result/', UseNNAPIView.as_view(), name="result-create"),
 ]
