@@ -870,3 +870,113 @@ TypeError: Field 'id' expected a number but got <django.contrib.auth.models.Anon
 2023-11-10 10:11:35,420 MARKDOWN     DEBUG    Successfully imported extension module "markdown.extensions.toc".
 2023-11-10 10:11:35,420 MARKDOWN     DEBUG    Successfully loaded extension "markdown.extensions.toc.TocExtension".
 2023-11-10 10:11:35,423 django.request WARNING  Method Not Allowed: /account/api/change-password
+2023-11-10 10:20:54,632 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-10 10:20:56,169 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-11-10 10:20:56,297 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-10 10:20:56,298 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-10 10:20:56,298 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-10 10:20:56,298 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-10 10:21:07,578 django.request WARNING  Not Found: /api/
+2023-11-10 10:21:08,397 django.request WARNING  Not Found: /api/
+2023-11-10 10:21:16,057 django.request WARNING  Not Found: /
+2023-11-10 10:22:02,155 MARKDOWN     DEBUG    Successfully imported extension module "markdown.extensions.toc".
+2023-11-10 10:22:02,155 MARKDOWN     DEBUG    Successfully loaded extension "markdown.extensions.toc.TocExtension".
+2023-11-10 10:22:02,172 django.request WARNING  Method Not Allowed: /account/api/register/
+2023-11-10 10:22:23,222 MARKDOWN     DEBUG    Successfully imported extension module "markdown.extensions.toc".
+2023-11-10 10:22:23,222 MARKDOWN     DEBUG    Successfully loaded extension "markdown.extensions.toc.TocExtension".
+2023-11-10 10:22:23,226 django.request WARNING  Method Not Allowed: /account/api/login/
+2023-11-10 10:22:38,379 MARKDOWN     DEBUG    Successfully imported extension module "markdown.extensions.toc".
+2023-11-10 10:22:38,379 MARKDOWN     DEBUG    Successfully loaded extension "markdown.extensions.toc.TocExtension".
+2023-11-10 10:22:38,383 django.request WARNING  Method Not Allowed: /account/api/change-password/
+2023-11-10 10:50:35,219 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-10 10:50:36,779 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-11-10 10:50:36,911 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-10 10:50:36,911 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-10 10:50:36,911 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-10 10:50:36,911 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-10 10:50:51,912 MARKDOWN     DEBUG    Successfully imported extension module "markdown.extensions.toc".
+2023-11-10 10:50:51,913 MARKDOWN     DEBUG    Successfully loaded extension "markdown.extensions.toc.TocExtension".
+2023-11-10 10:50:51,936 django.request WARNING  Method Not Allowed: /account/api/change-password/
+2023-11-10 10:50:53,219 MARKDOWN     DEBUG    Successfully imported extension module "markdown.extensions.toc".
+2023-11-10 10:50:53,219 MARKDOWN     DEBUG    Successfully loaded extension "markdown.extensions.toc.TocExtension".
+2023-11-10 10:50:53,223 django.request WARNING  Method Not Allowed: /account/api/change-password/
+2023-11-10 10:56:19,945 PIL.PngImagePlugin DEBUG    STREAM b'IHDR' 16 13
+2023-11-10 10:56:19,945 PIL.PngImagePlugin DEBUG    STREAM b'IDAT' 41 8192
+2023-11-10 10:56:19,946 PIL.Image    DEBUG    Importing BlpImagePlugin
+2023-11-10 10:56:19,947 PIL.Image    DEBUG    Importing BmpImagePlugin
+2023-11-10 10:56:19,947 PIL.Image    DEBUG    Importing BufrStubImagePlugin
+2023-11-10 10:56:19,948 PIL.Image    DEBUG    Importing CurImagePlugin
+2023-11-10 10:56:19,948 PIL.Image    DEBUG    Importing DcxImagePlugin
+2023-11-10 10:56:19,949 PIL.Image    DEBUG    Importing DdsImagePlugin
+2023-11-10 10:56:19,949 PIL.Image    DEBUG    Importing EpsImagePlugin
+2023-11-10 10:56:19,950 PIL.Image    DEBUG    Importing FitsImagePlugin
+2023-11-10 10:56:19,951 PIL.Image    DEBUG    Importing FliImagePlugin
+2023-11-10 10:56:19,951 PIL.Image    DEBUG    Importing FpxImagePlugin
+2023-11-10 10:56:19,951 PIL.Image    DEBUG    Image: failed to import FpxImagePlugin: No module named 'olefile'
+2023-11-10 10:56:19,951 PIL.Image    DEBUG    Importing FtexImagePlugin
+2023-11-10 10:56:19,952 PIL.Image    DEBUG    Importing GbrImagePlugin
+2023-11-10 10:56:19,952 PIL.Image    DEBUG    Importing GifImagePlugin
+2023-11-10 10:56:19,952 PIL.Image    DEBUG    Importing GribStubImagePlugin
+2023-11-10 10:56:19,953 PIL.Image    DEBUG    Importing Hdf5StubImagePlugin
+2023-11-10 10:56:19,953 PIL.Image    DEBUG    Importing IcnsImagePlugin
+2023-11-10 10:56:19,954 PIL.Image    DEBUG    Importing IcoImagePlugin
+2023-11-10 10:56:19,954 PIL.Image    DEBUG    Importing ImImagePlugin
+2023-11-10 10:56:19,955 PIL.Image    DEBUG    Importing ImtImagePlugin
+2023-11-10 10:56:19,956 PIL.Image    DEBUG    Importing IptcImagePlugin
+2023-11-10 10:56:19,956 PIL.Image    DEBUG    Importing JpegImagePlugin
+2023-11-10 10:56:19,956 PIL.Image    DEBUG    Importing Jpeg2KImagePlugin
+2023-11-10 10:56:19,957 PIL.Image    DEBUG    Importing McIdasImagePlugin
+2023-11-10 10:56:19,957 PIL.Image    DEBUG    Importing MicImagePlugin
+2023-11-10 10:56:19,957 PIL.Image    DEBUG    Image: failed to import MicImagePlugin: No module named 'olefile'
+2023-11-10 10:56:19,958 PIL.Image    DEBUG    Importing MpegImagePlugin
+2023-11-10 10:56:19,958 PIL.Image    DEBUG    Importing MpoImagePlugin
+2023-11-10 10:56:19,961 PIL.Image    DEBUG    Importing MspImagePlugin
+2023-11-10 10:56:19,962 PIL.Image    DEBUG    Importing PalmImagePlugin
+2023-11-10 10:56:19,963 PIL.Image    DEBUG    Importing PcdImagePlugin
+2023-11-10 10:56:19,963 PIL.Image    DEBUG    Importing PcxImagePlugin
+2023-11-10 10:56:19,963 PIL.Image    DEBUG    Importing PdfImagePlugin
+2023-11-10 10:56:19,970 PIL.Image    DEBUG    Importing PixarImagePlugin
+2023-11-10 10:56:19,970 PIL.Image    DEBUG    Importing PngImagePlugin
+2023-11-10 10:56:19,970 PIL.Image    DEBUG    Importing PpmImagePlugin
+2023-11-10 10:56:19,970 PIL.Image    DEBUG    Importing PsdImagePlugin
+2023-11-10 10:56:19,971 PIL.Image    DEBUG    Importing QoiImagePlugin
+2023-11-10 10:56:19,971 PIL.Image    DEBUG    Importing SgiImagePlugin
+2023-11-10 10:56:19,971 PIL.Image    DEBUG    Importing SpiderImagePlugin
+2023-11-10 10:56:19,972 PIL.Image    DEBUG    Importing SunImagePlugin
+2023-11-10 10:56:19,972 PIL.Image    DEBUG    Importing TgaImagePlugin
+2023-11-10 10:56:19,972 PIL.Image    DEBUG    Importing TiffImagePlugin
+2023-11-10 10:56:19,973 PIL.Image    DEBUG    Importing WebPImagePlugin
+2023-11-10 10:56:19,974 PIL.Image    DEBUG    Importing WmfImagePlugin
+2023-11-10 10:56:19,975 PIL.Image    DEBUG    Importing XbmImagePlugin
+2023-11-10 10:56:19,976 PIL.Image    DEBUG    Importing XpmImagePlugin
+2023-11-10 10:56:19,976 PIL.Image    DEBUG    Importing XVThumbImagePlugin
+2023-11-10 10:56:20,156 django.request ERROR    Internal Server Error: /api/result/
+Traceback (most recent call last):
+  File "/home/flos_alba_lilium/.local/share/virtualenvs/Practice-AcgnxGWr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/flos_alba_lilium/.local/share/virtualenvs/Practice-AcgnxGWr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/flos_alba_lilium/.local/share/virtualenvs/Practice-AcgnxGWr/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/flos_alba_lilium/.local/share/virtualenvs/Practice-AcgnxGWr/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/flos_alba_lilium/.local/share/virtualenvs/Practice-AcgnxGWr/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/flos_alba_lilium/.local/share/virtualenvs/Practice-AcgnxGWr/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/flos_alba_lilium/.local/share/virtualenvs/Practice-AcgnxGWr/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/flos_alba_lilium/.local/share/virtualenvs/Practice-AcgnxGWr/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/flos_alba_lilium/Practice/EmotionRecognizer/recognizerapp/views.py", line 56, in post
+    serialized_img = ImagesSerializer(img_res).save()
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/flos_alba_lilium/.local/share/virtualenvs/Practice-AcgnxGWr/lib/python3.11/site-packages/rest_framework/serializers.py", line 180, in save
+    assert hasattr(self, '_errors'), (
+AssertionError: You must call `.is_valid()` before calling `.save()`.
