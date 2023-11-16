@@ -23,9 +23,10 @@ function LoginForm({ onSubmit, form, onRegisterClick }) {
         <button type="submit">Log In</button>
       </form>
 
-      <a href="#" onClick={onRegisterClick}>
-        No account? Register
-      </a>
+      <button onClick={handleClick}>
+  No account? Register
+</button>
+
     </div>
   );
 }
