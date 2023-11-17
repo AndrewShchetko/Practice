@@ -33,7 +33,7 @@ export const NeuralNetworkForm = () => {
       data.append('image', formData.image);
       data.append('comment', formData.comment);
 
-      const response = await axios.post('http://your-django-api-endpoint/use_nn/', data);
+      const response = await axios.post('http://localhost:8000/api/result/', data);
 
       if (response.status === 200) {
         navigate('/result')

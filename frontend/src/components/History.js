@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -10,7 +10,7 @@ export const ResultsComponent = () => {
   useEffect(() => {
     const fetchResults = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/account/api/result/', {
+        const response = await axios.get('http://localhost:8000/api/list/', {
           headers: {
             'Content-Type': 'application/json',
             // Добавьте токен авторизации, если он необходим
