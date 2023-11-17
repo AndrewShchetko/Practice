@@ -5,10 +5,11 @@ name = "pypi"
 
 [packages]
 django = "*"
-numpy = "*"
 pillow = "*"
 tensorflow = "*"
 django-rest-framework = "*"
+django-cors-headers = "*"
+numpy = "*"
 
 [dev-packages]
 opencv-python = "*"

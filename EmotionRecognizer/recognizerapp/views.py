@@ -50,24 +50,35 @@ class UseNNAPIView(APIView):
     def post(self, request, *args, **kwargs):
         user = request.user
         form = NeuralNetworkForm(request.data, request.FILES)
-
+        print("form.isnt_valid")
         if form.is_valid():
+            print("form.is_valid")
             img_res = form.save()
-            serialized_img = ImagesSerializer(img_res).save()
+            # print(ImagesSerializer(request, data=img_res).is_valid())
+            # print(f'data ----  {form.cleaned_data}')
+            # if ImagesSerializer(request, data=img_res).is_valid():
+            #     print("is valid")
+            #     serialized_img = ImagesSerializer(request, data=img_res).save()
+            # else:
+            #     return Response({'detail': 'Invalid form data'}, status=status.HTTP_400_BAD_REQUEST)
+            
             cleaned = form.cleaned_data
             img = cleaned['image']
+            print('HEAR')
 
             image = Image.open(img).convert('L')
             image = np.asarray(image)
             image = np.expand_dims(image, axis=0)
-            data: np.ndarray
+            data: np.ndarray = np.empty(image.shape)
             for image in resize_images(images_array=image):
                 data = np.append(data, np.expand_dims(image, axis=0), axis=0)
+                print(data.shape)
 
             model_loaded = keras.saving.load_model("./recognizerapp/model")
             predicted = model_loaded.predict(data).tolist()
             maxi = predicted.index(max(predicted))
             emotion = emotions[maxi]
+            print(f"emotion --- {emotion}")
 
             results = {'image': img_res, 'emotion': emotion, 'user': user}
             Results.objects.create(**results)
