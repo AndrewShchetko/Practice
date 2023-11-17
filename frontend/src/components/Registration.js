@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
+import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export const RegistrationForm = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     username: "",
     password1: "",
@@ -31,8 +33,9 @@ export const RegistrationForm = () => {
         }
       );
 
-      if (response.status === 200) {
+      if (response.status === 201) {
         // Регистрация прошла успешно, обработка успешного ответа
+        navigate('/');
         console.log("Пользователь зарегистрирован успешно");
       } else {
         // Обработка ошибки
