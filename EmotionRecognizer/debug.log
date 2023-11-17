@@ -870,3 +870,22 @@ TypeError: Field 'id' expected a number but got <django.contrib.auth.models.Anon
 2023-11-10 10:11:35,420 MARKDOWN     DEBUG    Successfully imported extension module "markdown.extensions.toc".
 2023-11-10 10:11:35,420 MARKDOWN     DEBUG    Successfully loaded extension "markdown.extensions.toc.TocExtension".
 2023-11-10 10:11:35,423 django.request WARNING  Method Not Allowed: /account/api/change-password
+2023-11-10 10:38:40,884 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-11-10 10:38:41,901 tensorflow   DEBUG    Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2023-11-10 10:38:41,981 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-10 10:38:41,981 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-10 10:38:41,981 h5py._conv   DEBUG    Creating converter from 7 to 5
+2023-11-10 10:38:41,981 h5py._conv   DEBUG    Creating converter from 5 to 7
+2023-11-10 10:38:44,059 django.request WARNING  Not Found: /
+2023-11-10 10:40:11,311 MARKDOWN     DEBUG    Successfully imported extension module "markdown.extensions.toc".
+2023-11-10 10:40:11,311 MARKDOWN     DEBUG    Successfully loaded extension "markdown.extensions.toc.TocExtension".
+2023-11-10 10:40:11,319 django.request WARNING  Method Not Allowed: /account/api/login/
+2023-11-10 10:40:16,697 MARKDOWN     DEBUG    Successfully imported extension module "markdown.extensions.toc".
+2023-11-10 10:40:16,697 MARKDOWN     DEBUG    Successfully loaded extension "markdown.extensions.toc.TocExtension".
+2023-11-10 10:40:16,700 django.request WARNING  Bad Request: /account/api/login/
+2023-11-10 10:41:05,586 MARKDOWN     DEBUG    Successfully imported extension module "markdown.extensions.toc".
+2023-11-10 10:41:05,586 MARKDOWN     DEBUG    Successfully loaded extension "markdown.extensions.toc.TocExtension".
+2023-11-10 10:41:05,592 django.request WARNING  Method Not Allowed: /account/api/register/
+2023-11-10 10:41:35,832 MARKDOWN     DEBUG    Successfully imported extension module "markdown.extensions.toc".
+2023-11-10 10:41:35,832 MARKDOWN     DEBUG    Successfully loaded extension "markdown.extensions.toc.TocExtension".
+2023-11-10 10:41:35,835 django.request WARNING  Method Not Allowed: /account/api/change-password/
