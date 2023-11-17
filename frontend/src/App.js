@@ -1,9 +1,14 @@
 import React from 'react';
-import AppRoutes from './routes';
+import {AppRoutes} from './routes';
+import { BrowserRouter } from 'react-router-dom';
+import { AppNavbar as Navbar } from './components/Navbar';
 
-function App() {
+const App = () => {
   return (
-  <AppRoutes />
+    <BrowserRouter>
+      <Navbar />
+      <AppRoutes />
+    </BrowserRouter>
   );
 }
 
