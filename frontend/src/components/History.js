@@ -4,17 +4,15 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-export const ResultsComponent = () => {
+export const HistoryComponent = () => {
   const [results, setResults] = useState([]);
 
   useEffect(() => {
     const fetchResults = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/list/', {
+        const response = await axios.get('http://localhost:8000/account/api/list/', {
           headers: {
             'Content-Type': 'application/json',
-            // Добавьте токен авторизации, если он необходим
-            // 'Authorization': `Bearer ${yourAccessToken}`
           },
         });
 

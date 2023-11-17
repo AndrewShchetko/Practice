@@ -4,7 +4,7 @@ import { LoginForm } from './components/Login';
 import { RegistrationForm } from './components/Registration';
 import { NeuralNetworkForm } from './components/NNfrom';
 import { ChangePasswordForm } from './components/Settings';
-import { ResultsComponent } from './components/History';
+import { HistoryComponent } from './components/History';
 
 
 export const AppRoutes = () => {
@@ -14,7 +14,7 @@ export const AppRoutes = () => {
         <Route path="/register" element={<RegistrationForm />} />
         <Route path="/change-password" element={<ChangePasswordForm />} />
         <Route path="/use-nn" element={<NeuralNetworkForm />} />
-        <Route path="/results" element={<ResultsComponent />} />
+        <Route path="/history" element={<HistoryComponent />} />
       </Routes>
   );
 };
