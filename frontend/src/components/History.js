@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const HistoryComponent = () => {
   const [results, setResults] = useState([]);
+  // const authHeader = `${sessionStorage.getItem('auth')}`;
 
   useEffect(() => {
     const fetchResults = async () => {
@@ -13,6 +14,7 @@ export const HistoryComponent = () => {
         const response = await axios.get('http://localhost:8000/account/api/list/', {
           headers: {
             'Content-Type': 'application/json',
+             // 'Authorization': authHeader, 
           },
         });
 
@@ -31,7 +33,7 @@ export const HistoryComponent = () => {
 
   return (
     <Container>
-      <h1>Results</h1>
+      <h1>History</h1>
       <Row>
         <Col>
           <ul>

@@ -9,6 +9,7 @@ export const ChangePasswordForm = () => {
     old_password: '',
     new_password: '',
   });
+  // const authHeader = `${sessionStorage.getItem('auth')}`;
 
   const handleChange = (e) => {
     setFormData({
@@ -24,6 +25,7 @@ export const ChangePasswordForm = () => {
       const response = await axios.post('http://localhost:8000/account/api/change-password/', formData, {
         headers: {
           'Content-Type': 'application/json',
+          // 'Authorization': authHeader, 
         },
       });
 
