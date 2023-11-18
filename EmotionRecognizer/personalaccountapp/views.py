@@ -13,6 +13,8 @@ from .serializers import RegisterUserSerializer, ResultsSerializer
 from .forms import RegisterUserForm, LoginUserForm, ChangePasswordForm
 from .models import Results, User
 
+from rest_framework.authentication import SessionAuthentication, BasicAuthentication
+from rest_framework.permissions import IsAuthenticated
 
 class PasswordException(Exception):
     def __init__(self, message):
@@ -37,7 +39,8 @@ class RegisterUser(CreateView):
 
 class RegisterUserAPIView(CreateAPIView):
     serializer_class = RegisterUserSerializer
-    permission_classes = [AllowAny]
+    authentication_classes = [SessionAuthentication, BasicAuthentication]
+    permission_classes = [IsAuthenticated]
 
     def form_valid(self, form):
         user = form.save()
@@ -58,9 +61,10 @@ class LoginUser(LoginView):
 
 
 class LoginUserAPIView(APIView):
-    def post(self, request, *args, **kwargs):
-        form = LoginUserForm(request.POST)
+    # authentication_classes = [SessionAuthentication]
 
+    def post(self, request, *args, **kwargs):
+        form = LoginUserForm(data=request.data)
         if form.is_valid():
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
@@ -73,7 +77,7 @@ class LoginUserAPIView(APIView):
             else:
                 return Response({'detail': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
         else:
-            return Response({'detail': 'Invalid form data'}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({'detail': f'Invalid form data: {form.cleaned_data}'}, status=status.HTTP_400_BAD_REQUEST)
 
 
 def change_password(request):
@@ -99,8 +103,11 @@ def change_password(request):
 
 
 class ChangePasswordAPIView(APIView):
+    authentication_classes = [SessionAuthentication, BasicAuthentication]
+    permission_classes = [IsAuthenticated]
+
     def post(self, request, *args, **kwargs):
-        form = ChangePasswordForm(request.data)
+        form = ChangePasswordForm(request, data=request.data)
 
         if form.is_valid():
             cleaned = form.cleaned_data
@@ -124,8 +131,11 @@ class ChangePasswordAPIView(APIView):
 
 class ResultsModelViewSet(ReadOnlyModelViewSet):
     serializer_class = ResultsSerializer
+    authentication_classes = [SessionAuthentication, BasicAuthentication]
+    permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
         user = self.request.user
+        print(self.request.user.username)
         queryset = Results.objects.filter(user=user)
-        return queryset    # Отдает все результаты конкретного пользователя
+        return queryset

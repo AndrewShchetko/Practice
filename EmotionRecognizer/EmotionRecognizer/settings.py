@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'recognizerapp',
     'personalaccountapp',
     'rest_framework',
-    'corsheaders'
+    'corsheaders',
+    'rest_framework_simplejwt',
 ]
 
 MIDDLEWARE = [
@@ -51,7 +52,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-     'corsheaders.middleware.CorsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+]
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
 ]
 
 ROOT_URLCONF = 'EmotionRecognizer.urls'
@@ -69,14 +74,31 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
             ],
         },
-    },
+    }
 ]
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # React development server
-    # Add other origins as needed
+    "http://localhost:3000",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+   'http://localhost:3000',
+]
+
+ALLOWED_HOSTS = [
+    'localhost',
+]
+
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
 ]
 WSGI_APPLICATION = 'EmotionRecognizer.wsgi.application'
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ]
+}
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -163,3 +185,7 @@ LOGGING = {
         }
     }
 }
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+SESSION_COOKIE_AGE = 1209600
+CORS_ALLOW_CREDENTIALS = True
+CSRF_COOKIE_SECURE = False
