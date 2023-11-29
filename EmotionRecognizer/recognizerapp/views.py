@@ -11,6 +11,9 @@ from personalaccountapp.models import Results
 from personalaccountapp.serializers import ResultsSerializer
 from .serializers import ImagesSerializer
 
+from rest_framework.authentication import SessionAuthentication, BasicAuthentication
+from rest_framework.permissions import IsAuthenticated
+
 emotions = ['Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral']
 
 
@@ -47,36 +50,44 @@ def use_nn(request):
 
 
 class UseNNAPIView(APIView):
-    def post(self, request, *args, **kwargs):
-        user = request.user
-        form = NeuralNetworkForm(request.data, request.FILES)
+    authentication_classes = [SessionAuthentication, BasicAuthentication]
+    permission_classes = [IsAuthenticated]
 
-        if form.is_valid():
-            img_res = form.save()
-            serialized_img = ImagesSerializer(img_res).save()
+    def post(self, request, *args, **kwargs):
+        user = request.user.pk
+        form = NeuralNetworkForm(request.data, request.FILES)
+        if form.is_valid(): 
+            print(f"DATA:{form.data}\nCLEANED DATA:{form.cleaned_data}")      
             cleaned = form.cleaned_data
             img = cleaned['image']
 
             image = Image.open(img).convert('L')
             image = np.asarray(image)
             image = np.expand_dims(image, axis=0)
-            data: np.ndarray
+            data: np.ndarray = np.empty(image.shape)
             for image in resize_images(images_array=image):
-                data = np.append(data, np.expand_dims(image, axis=0), axis=0)
+                data = np.expand_dims(image, axis=0)
+                print(data.shape)
 
-            model_loaded = keras.saving.load_model("./recognizerapp/model")
+            model_loaded = keras.saving.load_model("EmotionRecognizer/recognizerapp/model")
             predicted = model_loaded.predict(data).tolist()
             maxi = predicted.index(max(predicted))
             emotion = emotions[maxi]
-
-            results = {'image': img_res, 'emotion': emotion, 'user': user}
-            Results.objects.create(**results)
+            print(f"emotion --- {emotion}") # Сохранение результата в 2 этапа
+            
+            results = {'image': cleaned, 'emotion': emotion, 'user': user}
+            #print("CREATING")
+            #Results.objects.create(**results)
+            #print("CREATED")
 
             serializer = ResultsSerializer(data=results)
             if serializer.is_valid():
-                serializer.save(image=serialized_img)
+                print("----SAVING----")
+                serializer.save()
                 return Response(serializer.data, status=status.HTTP_201_CREATED)
             else:
+                print("----I HATE WORLD----")
+                print(serializer.errors)
                 return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         else:
             return Response({'detail': 'Invalid form data'}, status=status.HTTP_400_BAD_REQUEST)
