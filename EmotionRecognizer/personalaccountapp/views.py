@@ -107,7 +107,7 @@ class ChangePasswordAPIView(APIView):
     permission_classes = [IsAuthenticated]
 
     def post(self, request, *args, **kwargs):
-        form = ChangePasswordForm(request, data=request.data)
+        form = ChangePasswordForm(data=request.data)
 
         if form.is_valid():
             cleaned = form.cleaned_data
@@ -129,13 +129,24 @@ class ChangePasswordAPIView(APIView):
             return Response({'detail': 'Invalid form data'}, status=status.HTTP_400_BAD_REQUEST)
 
 
+from .models import Images
+from .serializers import ImagesSerializer
+
 class ResultsModelViewSet(ReadOnlyModelViewSet):
     serializer_class = ResultsSerializer
     authentication_classes = [SessionAuthentication, BasicAuthentication]
     permission_classes = [IsAuthenticated]
 
-    def get_queryset(self):
+    def list(self, request, *args, **kwargs):
         user = self.request.user
-        print(self.request.user.username)
         queryset = Results.objects.filter(user=user)
-        return queryset
+        serialized_data = ResultsSerializer(queryset, many=True).data
+
+        # Добавим данные из связанных моделей
+        for data in serialized_data:
+            image_id = data['image']
+            image = Images.objects.get(pk=image_id)
+            image_data = ImagesSerializer(image).data
+            data['image'] = image_data
+
+        return Response(serialized_data)
