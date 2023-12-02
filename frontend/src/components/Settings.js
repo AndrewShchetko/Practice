@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -42,40 +42,50 @@ export const ChangePasswordForm = () => {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <Form.Group className="mb-3" controlId="formBasicUsername">
-        <Form.Label>Username:</Form.Label>
-        <Form.Control
-          type="text"
-          name="username"
-          value={formData.username}
-          onChange={handleChange}
-        />
-      </Form.Group>
+    <div className="bg-dark vh-100">
+    <Container className="d-flex justify-content-center align-items-center h-100">
+      <Row>
+        <Col md={15}>
+          <div className="card p-4 bg-light border-light">
+            <Form onSubmit={handleSubmit}>
+              <Form.Group className="mb-3" controlId="formBasicUsername">
+                <Form.Label>Username:</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="username"
+                  value={formData.username}
+                  onChange={handleChange}
+                />
+              </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicOldPassword">
-        <Form.Label>Old Password:</Form.Label>
-        <Form.Control
-          type="password"
-          name="old_password"
-          value={formData.old_password}
-          onChange={handleChange}
-        />
-      </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicOldPassword">
+                <Form.Label>Old Password:</Form.Label>
+                <Form.Control
+                  type="password"
+                  name="old_password"
+                  value={formData.old_password}
+                  onChange={handleChange}
+                />
+              </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicNewPassword">
-        <Form.Label>New Password:</Form.Label>
-        <Form.Control
-          type="password"
-          name="new_password"
-          value={formData.new_password}
-          onChange={handleChange}
-        />
-      </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicNewPassword">
+                <Form.Label>New Password:</Form.Label>
+                <Form.Control
+                  type="password"
+                  name="new_password"
+                  value={formData.new_password}
+                  onChange={handleChange}
+                />
+              </Form.Group>
 
-      <Button variant="primary" type="submit">
-        Change Password
-      </Button>
-    </Form>
+              <Button variant="primary" type="submit">
+                Change Password
+              </Button>
+            </Form>
+          </div>
+        </Col>
+      </Row>
+    </Container>
+  </div>
   );
 };

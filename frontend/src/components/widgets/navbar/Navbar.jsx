@@ -1,30 +1,18 @@
-import {Navbar as BootstrapNavbar} from 'react-bootstrap/Navbar';
-import {Image as BootstrapImage} from 'react-bootstrap/Image';
+import React from 'react';
+import { Navbar, Container, Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import {ThemeSwitcher } from './ThemeSwitcher';
 
-function Navbar(){
-return(
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
-      <Navbar className="bg-body-tertiary">
-        <Container>
-          <Navbar.Brand href="#home">
-            <img
-              src="/img/logo.svg"
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-              alt="React Bootstrap logo"
-            />
-          </Navbar.Brand>
-        </Container>
-      </Navbar>
-      <br />
-        <Navbar.Text>
-            Signed in as: <a href="#login">Mark Otto</a>
-          </Navbar.Text>
-        </Container>
-   </Navbar>
-)
-}
-
-export default Navbar;
+export const AppNavbar = () => {
+  return (
+<Navbar bg="light" variant="light">
+  <Container>
+    <Navbar.Brand as={Link} to="/">Emotion Recognizer</Navbar.Brand>
+    <Nav className="me-auto">
+      <Nav.Link as={Link} to="/change-password">Settings</Nav.Link>
+    </Nav>
+    <ThemeSwitcher/>
+  </Container>
+</Navbar>
+  );
+};

@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { Form, Button } from "react-bootstrap";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { Form, Button } from 'react-bootstrap';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const NeuralNetworkForm = () => {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     image: null,
-    comment: "",
+    comment: '',
   });
   const [resultText, setResultText] = useState('');
-
-  // const authHeader = `${sessionStorage.getItem('auth')}`;
 
   const handleChange = (e) => {
     setFormData({
@@ -43,62 +43,59 @@ export const NeuralNetworkForm = () => {
 
     try {
       const data = new FormData();
-      data.append("image", formData.image);
-      data.append("comment", formData.comment);
+      data.append('image', formData.image);
+      data.append('comment', formData.comment);
 
-      const response = await axios.post(
-        "http://localhost:8000/api/result/",
-        data, {
-          headers: {
-            'Content-Type': 'multipart/form-data',
-            // 'Authorization': authHeader,
-            'X-CSRFToken': csrfToken,
-          },withCredentials: true, 
-        });
+      const response = await axios.post('http://localhost:8000/api/result/', data, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+          'X-CSRFToken': csrfToken,
+        },
+        withCredentials: true,
+      });
 
-      if (response.status === 200) {
-        navigate("/use-nn");
+      if (response.status === 201 || response.status === 200) {
+        navigate('/use-nn');
         const { resultText } = response.data;
         setResultText(resultText);
       } else {
-        console.error("Ошибка при отправке данных");
+        toast.error('Ошибка при отправке данных');
       }
     } catch (error) {
-      console.error("Error during API request:", error);
+      console.error('Error during API request:', error);
+      toast.error('Ошибка при отправке запроса');
     }
   };
 
   return (
-    <div>
-      <Form onSubmit={handleSubmit}>
-        <Form.Group className="mb-3">
-          <Form.Label>Comment:</Form.Label>
-          <Form.Control
-            type="text"
-            name="comment"
-            value={formData.comment}
-            onChange={handleChange}
-          />
-        </Form.Group>
-        <Form.Group className="mb-3">
-          <Form.Label>Image:</Form.Label>
-          <Form.Control
-            type="file"
-            name="image"
-            accept="image/*"
-            onChange={handleImageChange}
-          />
-        </Form.Group>
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
-      </Form>
-      {resultText && (
-        <div className="result-container">
-          <h3>Result Text:</h3>
-          <p>{resultText}</p>
-        </div>
-      )}
+<div className="container-fluid d-flex justify-content-center align-items-center vh-100 bg-dark">
+      <div className="card p-4 bg-light border-light">
+        <Form onSubmit={handleSubmit}>
+          <Form.Group className="mb-3">
+            <Form.Label>Comment:</Form.Label>
+            <Form.Control
+              type="text"
+              name="comment"
+              value={formData.comment}
+              onChange={handleChange}
+            />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>Image:</Form.Label>
+            <Form.Control
+              type="file"
+              name="image"
+              accept="image/*"
+              onChange={handleImageChange}
+            />
+          </Form.Group>
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+        </Form>
+        <ToastContainer />
+      </div>
     </div>
+
   );
 };

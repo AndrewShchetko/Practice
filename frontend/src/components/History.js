@@ -32,7 +32,7 @@ export const HistoryComponent = () => {
   }, []); // Пустой массив зависимостей, чтобы запрос выполнялся только один раз при загрузке компонента
 
   return (
-    <Container>
+<Container>
       <h1>History</h1>
       <Row>
         <Col>
