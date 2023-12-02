@@ -40,7 +40,7 @@ class RegisterUser(CreateView):
 class RegisterUserAPIView(CreateAPIView):
     serializer_class = RegisterUserSerializer
     authentication_classes = [SessionAuthentication, BasicAuthentication]
-    permission_classes = [IsAuthenticated]
+    permission_classes = []
 
     def form_valid(self, form):
         user = form.save()

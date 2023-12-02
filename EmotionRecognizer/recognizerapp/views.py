@@ -56,9 +56,15 @@ class UseNNAPIView(APIView):
     def post(self, request, *args, **kwargs):
         user = request.user.pk
         form = NeuralNetworkForm(request.data, request.FILES)
+        print("user: ",request.user)
         if form.is_valid(): 
             print(f"DATA:{form.data}\nCLEANED DATA:{form.cleaned_data}")      
             cleaned = form.cleaned_data
+            serializer = ImagesSerializer(data=form.cleaned_data)
+            if serializer.is_valid():
+                global img_obj
+                img_obj = ImagesSerializer().create(form.cleaned_data)
+            img_obj = img_obj.pk
             img = cleaned['image']
 
             image = Image.open(img).convert('L')
@@ -75,16 +81,13 @@ class UseNNAPIView(APIView):
             emotion = emotions[maxi]
             print(f"emotion --- {emotion}") # Сохранение результата в 2 этапа
             
-            results = {'image': cleaned, 'emotion': emotion, 'user': user}
-            #print("CREATING")
-            #Results.objects.create(**results)
-            #print("CREATED")
+            results = {'image': img_obj, 'emotion': emotion, 'user': user}
 
             serializer = ResultsSerializer(data=results)
             if serializer.is_valid():
                 print("----SAVING----")
                 serializer.save()
-                return Response(serializer.data, status=status.HTTP_201_CREATED)
+                return Response(serializer.data.emotion, status=status.HTTP_201_CREATED)
             else:
                 print("----I HATE WORLD----")
                 print(serializer.errors)
