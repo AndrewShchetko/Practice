@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { ToastContainer} from 'react-toastify';
+import { errorToast } from './widgets/floating_windows/error_toast';
 
 export const ChangePasswordForm = () => {
   const [formData, setFormData] = useState({
@@ -9,7 +11,17 @@ export const ChangePasswordForm = () => {
     old_password: '',
     new_password: '',
   });
-  // const authHeader = `${sessionStorage.getItem('auth')}`;
+
+  const [csrfToken, setCsrfToken] = useState('');
+
+  useEffect(() => {
+    // Получаем CSRF-токен из куки
+    const csrfCookie = document.cookie.split('; ')
+      .find(row => row.startsWith('csrftoken='))
+      .split('=')[1];
+    setCsrfToken(csrfCookie);
+  }, []);
+
 
   const handleChange = (e) => {
     setFormData({
@@ -25,8 +37,9 @@ export const ChangePasswordForm = () => {
       const response = await axios.post('http://localhost:8000/account/api/change-password/', formData, {
         headers: {
           'Content-Type': 'application/json',
-          // 'Authorization': authHeader, 
+          'X-CSRFToken': csrfToken,
         },
+        withCredentials: true,
       });
 
       if (response.status === 200) {
@@ -35,14 +48,17 @@ export const ChangePasswordForm = () => {
       } else {
         // Обработка ошибки
         console.error('Ошибка при смене пароля');
+        errorToast('Ошибка при смене пароля');
       }
     } catch (error) {
       console.error('Ошибка при отправке запроса:', error);
+      errorToast('Ошибка при отправке запроса');
     }
   };
 
   return (
     <div className="bg-dark vh-100">
+      <ToastContainer/>
     <Container className="d-flex justify-content-center align-items-center h-100">
       <Row>
         <Col md={15}>

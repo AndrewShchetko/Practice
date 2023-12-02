@@ -42,7 +42,7 @@ export const LoginForm = () => {
       });
       if (response.status === 200) {
         navigate('/use-nn');
-      } else {
+      } else if(response.status === 403) {
         console.error('Ошибка при авторизации');
         errorToast('Ошибка при авторизации')
       }

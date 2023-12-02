@@ -8,6 +8,9 @@ export const AppNavbar = () => {
 <Navbar bg="light" variant="light">
   <Container>
     <Navbar.Brand as={Link} to="/">Emotion Recognizer</Navbar.Brand>
+    <Nav className="me-right">
+      <Nav.Link as={Link} to="/history">History</Nav.Link>
+    </Nav>
     <Nav className="me-auto">
       <Nav.Link as={Link} to="/change-password">Settings</Nav.Link>
     </Nav>
