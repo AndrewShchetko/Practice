@@ -56,41 +56,37 @@ class UseNNAPIView(APIView):
     def post(self, request, *args, **kwargs):
         user = request.user.pk
         form = NeuralNetworkForm(request.data, request.FILES)
-        print("user: ",request.user)
-        if form.is_valid(): 
-            print(f"DATA:{form.data}\nCLEANED DATA:{form.cleaned_data}")      
+        if form.is_valid():
             cleaned = form.cleaned_data
-            serializer = ImagesSerializer(data=form.cleaned_data)
+            serializer = ImagesSerializer(data=cleaned)  # Use cleaned data directly
             if serializer.is_valid():
-                global img_obj
-                img_obj = ImagesSerializer().create(form.cleaned_data)
-            img_obj = img_obj.pk
-            img = cleaned['image']
+                img_obj = serializer.save()  # Save the image instance
+                img = cleaned['image']
 
-            image = Image.open(img).convert('L')
-            image = np.asarray(image)
-            image = np.expand_dims(image, axis=0)
-            data: np.ndarray = np.empty(image.shape)
-            for image in resize_images(images_array=image):
-                data = np.expand_dims(image, axis=0)
-                print(data.shape)
+                image = Image.open(img).convert('L')
+                image = np.asarray(image)
+                image = np.expand_dims(image, axis=0)
+                data: np.ndarray = np.empty(image.shape)
+                for image in resize_images(images_array=image):
+                    data = np.expand_dims(image, axis=0)
+                    print(data.shape)
 
-            model_loaded = keras.saving.load_model("EmotionRecognizer/recognizerapp/model")
-            predicted = model_loaded.predict(data).tolist()
-            maxi = predicted.index(max(predicted))
-            emotion = emotions[maxi]
-            print(f"emotion --- {emotion}") # Сохранение результата в 2 этапа
-            
-            results = {'image': img_obj, 'emotion': emotion, 'user': user}
+                model_loaded = keras.saving.load_model("EmotionRecognizer/recognizerapp/model")
+                predicted = model_loaded.predict(data).tolist()
+                maxi = predicted.index(max(predicted))
+                emotion = emotions[maxi]
+                print(f"emotion --- {emotion}")
 
-            serializer = ResultsSerializer(data=results)
-            if serializer.is_valid():
-                print("----SAVING----")
-                serializer.save()
-                return Response(serializer.data.emotion, status=status.HTTP_201_CREATED)
+                results = {'image': img_obj.pk, 'emotion': emotion, 'user': user}
+                serializer = ResultsSerializer(data=results)
+                if serializer.is_valid():
+                    res_obj = serializer.save()  # Save the result instance
+                    return Response({'emotion': res_obj.emotion}, status=status.HTTP_201_CREATED)
+                else:
+                    print("Error in ResultsSerializer:", serializer.errors)
+                    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
             else:
-                print("----I HATE WORLD----")
-                print(serializer.errors)
+                print("Error in ImagesSerializer:", serializer.errors)
                 return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         else:
             return Response({'detail': 'Invalid form data'}, status=status.HTTP_400_BAD_REQUEST)

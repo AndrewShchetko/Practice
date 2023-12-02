@@ -56,8 +56,8 @@ export const NeuralNetworkForm = () => {
 
       if (response.status === 201 || response.status === 200) {
         navigate('/use-nn');
-        const { resultText } = response.data;
-        setResultText(resultText);
+        const { emotion } = response.data; // Access 'emotion' directly
+        setResultText(emotion);
       } else {
         toast.error('Ошибка при отправке данных');
       }
@@ -94,8 +94,13 @@ export const NeuralNetworkForm = () => {
           </Button>
         </Form>
         <ToastContainer />
+        {/* Display the emotion on the page */}
+        {resultText && (
+          <div className="mt-3">
+            <strong>Emotion:</strong> {resultText}
+          </div>
+        )}
       </div>
     </div>
-
   );
 };
