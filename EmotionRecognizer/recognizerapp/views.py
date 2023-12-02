@@ -10,7 +10,6 @@ from .image import resize_images
 from personalaccountapp.models import Results
 from personalaccountapp.serializers import ResultsSerializer
 from .serializers import ImagesSerializer
-
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 from rest_framework.permissions import IsAuthenticated
 
@@ -58,9 +57,9 @@ class UseNNAPIView(APIView):
         form = NeuralNetworkForm(request.data, request.FILES)
         if form.is_valid():
             cleaned = form.cleaned_data
-            serializer = ImagesSerializer(data=cleaned)  # Use cleaned data directly
+            serializer = ImagesSerializer(data=cleaned)
             if serializer.is_valid():
-                img_obj = serializer.save()  # Save the image instance
+                img_obj = serializer.save()
                 img = cleaned['image']
 
                 image = Image.open(img).convert('L')
@@ -80,7 +79,7 @@ class UseNNAPIView(APIView):
                 results = {'image': img_obj.pk, 'emotion': emotion, 'user': user}
                 serializer = ResultsSerializer(data=results)
                 if serializer.is_valid():
-                    res_obj = serializer.save()  # Save the result instance
+                    res_obj = serializer.save()
                     return Response({'emotion': res_obj.emotion}, status=status.HTTP_201_CREATED)
                 else:
                     print("Error in ResultsSerializer:", serializer.errors)
@@ -97,4 +96,3 @@ class UseNNAPIView(APIView):
         form = NeuralNetworkForm()
         context['form'] = form
         return render(request, 'recognizerapp/NNform.html', context=context)
-# Создает объекты моделей Images и Results в соответствии с моделями

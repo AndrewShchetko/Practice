@@ -5,16 +5,15 @@ from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView
 from rest_framework.generics import CreateAPIView
 from rest_framework.viewsets import ReadOnlyModelViewSet
-from rest_framework.permissions import AllowAny
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .serializers import RegisterUserSerializer, ResultsSerializer
+from .serializers import RegisterUserSerializer, ResultsSerializer, ImagesSerializer
 from .forms import RegisterUserForm, LoginUserForm, ChangePasswordForm
-from .models import Results, User
-
+from .models import Results, User, Images
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 from rest_framework.permissions import IsAuthenticated
+
 
 class PasswordException(Exception):
     def __init__(self, message):
@@ -61,8 +60,6 @@ class LoginUser(LoginView):
 
 
 class LoginUserAPIView(APIView):
-    # authentication_classes = [SessionAuthentication]
-
     def post(self, request, *args, **kwargs):
         form = LoginUserForm(data=request.data)
         if form.is_valid():
@@ -129,9 +126,6 @@ class ChangePasswordAPIView(APIView):
             return Response({'detail': 'Invalid form data'}, status=status.HTTP_400_BAD_REQUEST)
 
 
-from .models import Images
-from .serializers import ImagesSerializer
-
 class ResultsModelViewSet(ReadOnlyModelViewSet):
     serializer_class = ResultsSerializer
     authentication_classes = [SessionAuthentication, BasicAuthentication]
@@ -142,7 +136,6 @@ class ResultsModelViewSet(ReadOnlyModelViewSet):
         queryset = Results.objects.filter(user=user)
         serialized_data = ResultsSerializer(queryset, many=True).data
 
-        # Добавим данные из связанных моделей
         for data in serialized_data:
             image_id = data['image']
             image = Images.objects.get(pk=image_id)
