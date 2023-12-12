@@ -1,0 +1,20 @@
+/* Стили для светлой темы */
+body {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    /* Другие переменные и стили светлой темы */
+  }
+  
+  /* Стили для темной темы */
+  body.dark-mode {
+    --bg-color: #333333;
+    --text-color: #ffffff;
+    /* Другие переменные и стили темной темы */
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    /* Другие общие стили для тем */
+  }
+  

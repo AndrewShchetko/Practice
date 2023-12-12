@@ -1,0 +1,17 @@
+{% extends 'recognizerapp/base.html' %}
+
+{% block content %}
+<h1>Use NN</h1>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+<div class="form-error">{{ form.non_field_errors }}</div>
+    {{ form.as_p }}
+
+    <button type="submit">Send</button>
+</form>
+
+<h1>Emotion: {{ emotion }}</h1>
+
+{% endblock %}

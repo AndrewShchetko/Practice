@@ -5,12 +5,15 @@ name = "pypi"
 
 [packages]
 django = "*"
-numpy = "*"
-pandas = "*"
 pillow = "*"
 tensorflow = "*"
+django-rest-framework = "*"
+django-cors-headers = "*"
+numpy = "*"
 
 [dev-packages]
+opencv-python = "*"
+pandas = "*"
 
 [requires]
 python_version = "3.11"
