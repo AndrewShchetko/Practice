@@ -48,12 +48,12 @@ export const HistoryComponent = () => {
   return (
     <Container fluid>
       <ToastContainer />
-      <h1 style={{ color: 'white' }}>History</h1>
+      <h1 style={{ color: 'black' }}>History</h1>
       <Row xs={1} md={3} className="g-4">
         {results.map((result, index) => (
           <Col key={index}>
             <Card className="mb-3">
-              <Card.Img src={result.image.image} alt="Result" className="card-img-top" />
+              {/*<Card.Img src={result.image.image} alt="Result" className="card-img-top" />*/}
               <Card.Body>
                 <Card.Title style={{ color: 'black' }}>Emotion: {result.emotion}</Card.Title>
                 <Card.Text style={{ color: 'black' }}>Comment: {result.image.comment}</Card.Text>

@@ -29,12 +29,12 @@ def use_nn(request):
             image = Image.open(img).convert('L')
             image = np.asarray(image)
             image = np.expand_dims(image, axis=0)
-            data: np.ndarray
+            data: np.ndarray = np.empty(image.shape)
             for image in resize_images(images_array=image):
-                np.append(data, image)
-            data = np.expand_dims(data, axis=0)
+                data = np.expand_dims(image, axis=0)
+                print(data.shape)
 
-            model_loaded = keras.saving.load_model("./recognizerapp/model")
+            model_loaded = keras.saving.load_model("EmotionRecognizer/recognizerapp/model")
             predicted = model_loaded.predict(data).tolist()
             maxi = predicted.index(max(predicted))
             emotion = emotions[maxi]
@@ -68,13 +68,12 @@ class UseNNAPIView(APIView):
                 data: np.ndarray = np.empty(image.shape)
                 for image in resize_images(images_array=image):
                     data = np.expand_dims(image, axis=0)
-                    print(data.shape)
 
                 model_loaded = keras.saving.load_model("EmotionRecognizer/recognizerapp/model")
                 predicted = model_loaded.predict(data).tolist()
-                maxi = predicted.index(max(predicted))
+                print(predicted)
+                maxi = predicted[0].index(max(predicted[0]))
                 emotion = emotions[maxi]
-                print(f"emotion --- {emotion}")
 
                 results = {'image': img_obj.pk, 'emotion': emotion, 'user': user}
                 serializer = ResultsSerializer(data=results)
